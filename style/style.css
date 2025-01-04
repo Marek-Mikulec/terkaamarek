@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'Ephesis';
+    src: url('font/Ephesis-Regular.woff2') format('woff2'),
+         url('font/Ephesis-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('font/Lora-VariableFont_wght.woff2') format('woff2'),
+         url('font/Lora-VariableFont_wght.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #6a6e59;
+    --secondary-color: #c1ab9c;
+    --accent-color: #f5f6ee;
+    --text-color: #939681;
+    /* --background-color: #f5f6ee; */
+    --background-color: #e8d5ca;
+}
+
+* {
+    font-family: 'Lora', sans-serif;
+    letter-spacing: 1px;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1 {
+    font-family: 'Ephesis', serif;
+    letter-spacing: 5px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Ephesis', serif;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 900;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+}
