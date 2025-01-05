@@ -15,15 +15,18 @@
 }
 
 :root {
-    --primary-color: #6a6e59;
-    --secondary-color: #c1ab9c;
-    --accent-color: #f5f6ee;
-    --text-color: #939681;
-    /* --background-color: #f5f6ee; */
-    --background-color: #e8d5ca;
+    --primary-color: hsl(71, 11%, 39%);
+    --secondary-color: hsl(24, 23%, 68%);
+    --accent-color: hsl(67, 31%, 95%);
+    --text-color: hsl(69, 9%, 55%);
+    --background-color: hsl(22, 39%, 85%);
 }
 
 * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
     font-family: 'Lora', sans-serif;
     letter-spacing: 1px;
 }
@@ -54,4 +57,126 @@ button {
 
 button:hover {
     background-color: var(--accent-color);
+}
+
+/* Navigace */
+
+nav {
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    background-color: var(--secondary-color);
+    z-index: 1;
+}
+
+#navbar {
+    
+    display: grid;
+    grid-auto-flow: column;
+    place-content: center;
+    grid-template-columns: 75px 1fr;
+    grid-auto-rows: 60px;
+    gap: 0.4em;
+    max-width: 1080px;  
+    vertical-align: center; 
+    margin: 0 auto
+}
+
+/**** Nav Logo ****/
+
+#nav-logo {
+    display: grid;
+    place-content: center;
+}
+
+nav img {
+    max-height: 55px
+}
+
+/**** Nav buttons *****/
+
+nav ul {
+    display: flex;
+    justify-content: right;
+    align-content: end;
+    gap: 0.4em;
+    padding-right: 0.4em;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 0.7em;
+    box-shadow: 0px 0px 6px var(--background-color);
+    width: 95%;    
+    height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.7em;
+    transition: 0.5s;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+   transition: 0.5s;
+   background-color: var(--accent-color);
+   color: var(--primary-color);
+   border: 1px solid var(--primary-color);
+   box-shadow: 0px 0px 8px var(--accent-color);
+}
+
+
+/* querry pro minimální šířku pro tablety */
+
+@media (max-width: 550px) {
+
+    /* Navigace Zmizení úvodu */
+    nav ul li:first-child {
+        display: none;
+    }
+}
+
+/* querry pro minimální šířku pro mobily */
+
+@media (max-width: 380px) {
+
+    /* Navigace Zmizení loga */
+    #nav-logo {
+        display: none;
+    }
+
+    #navbar {
+        display: block;
+        height: 60px;
+    }
+
+    nav ul {
+        justify-content: center;
+        align-content: end;
+        gap: 0.4em;
+        padding-right: 0;
+    }
+    
+    nav ul li {
+        
+    width: 95px
+    }
+}
+
+/* Querry pro desktop */
+
+@media (min-width: 769px) {
+
 }
