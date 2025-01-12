@@ -29,6 +29,7 @@
     scroll-behavior: smooth;
     font-family: 'Lora', sans-serif;
     letter-spacing: 1px;
+    line-height: 1;
 }
 
 body {
@@ -36,14 +37,25 @@ body {
     color: var(--text-color);
 }
 
+/* reusable*/
 
-button {
-    background-color: var(--secondary-color);
-    color: white;
+.row {
+    max-width: 900px;
+    width: 95%;
+    margin: 1em auto;
+    background-color: var(--accent-color);
+    display: grid;
+    gap: 0.66em;
+    padding: 0.66em;
 }
 
-button:hover {
-    background-color: var(--accent-color);
+.row > * {
+    display: grid;
+    gap: 0.33em;
+}
+
+h2 {
+    text-align: center;
 }
 
 /* Navigace */
@@ -154,7 +166,6 @@ header {
     color: var(--primary-color);
     display: grid;
     place-content: center;
-    line-height: 1;
     font-weight: 900;
     text-align: center;
 }
@@ -174,6 +185,52 @@ h1 {
     letter-spacing: 2px;
 }
 
+/* Místo konání*/
+
+#misto-box {
+    place-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.66em;
+}
+
+#misto-box > * {
+    display: grid;
+    place-content: center;
+    gap: 0.33em;
+}
+
+/***** místo konání img *****/
+
+#misto-img {
+    width: 100%;
+    height: 8.2em;
+    overflow: hidden;
+}
+
+#misto-img img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 13px;
+}
+
+
+/***** Mapa *****/
+
+#misto-map {
+    width: 100%;
+    height: 12.3em;
+    position: relative;
+}
+
+#misto-map iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 /* querry pro minimální šířku pro tablety */
 
 @media (max-width: 550px) {
@@ -181,6 +238,12 @@ h1 {
     /* Navigace Zmizení úvodu */
     nav ul li:first-child {
         display: none;
+    }
+
+    /***** Místo konání text *****/
+
+    #misto-text {
+        font-size: 0.81em;
     }
 }
 
@@ -221,6 +284,40 @@ h1 {
     #slogan {
         font-size: 1em;
     }
+    
+   
+    /***** místo konání img *****/
+
+    #misto-box {
+        grid-template-columns: 1fr;
+    }
+
+    #misto-img {
+        order: 1;
+        height: 5.4em;
+    }
+
+    #misto-img img {
+        
+        position: relative;
+        top: 6px;
+    }
+
+    /***** Místo konání text *****/
+
+    #misto {
+        gap: 1em;
+    }
+    #misto-text {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    /***** Mapa *****/
+
+    #misto-map {
+        height: 8.1em;
+    }
 }
 
 /* Querry pro desktop */
@@ -232,5 +329,14 @@ h1 {
         background: url("../images/uvod-1920-vzor.jpg");
         background-position: center;
         background-size: cover;
+    }
+
+    /***** Místo konání text *****/
+
+    #misto-text {
+        font-size: 1.2em;
+        position: relative;
+        place-content: center start;
+        right: -1.32em;
     }
 }
