@@ -20,6 +20,12 @@
     --accent-color: hsl(67, 31%, 95%);
     --text-color: hsl(69, 9%, 55%);
     --background-color: hsl(22, 39%, 85%);
+/* 
+    --primary-color: hsl(71, 11%, 47%);
+    --secondary-color: hsl(24, 23%, 68%);
+    --accent-color: hsl(67, 26%, 87%);
+    --text-color: hsl(69, 9%, 47%);
+    --background-color: hsl(22, 39%, 97%); */
 }
 
 * {
@@ -41,8 +47,8 @@ body {
 
 .row {
     max-width: 900px;
-    width: 95%;
-    margin: 1em auto;
+    width: 93.75%;
+    margin: 1.32em auto;
     background-color: var(--accent-color);
     display: grid;
     gap: 0.66em;
@@ -58,7 +64,37 @@ h2 {
     text-align: center;
 }
 
-/* Navigace */
+/******************* Galerie ****************/
+
+.gallery {
+    background-color: var(--primary-color);
+}
+
+.gallery-box {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 93.75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.66em;
+    padding: 0.66em 0;
+}
+
+.gallery-box > * {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    overflow: hidden;
+}
+
+.gallery-box div img {
+    width: 100%;
+    max-width: none;
+    object-fit: cover;
+}
+
+/***************** Navigace ***************/
 
 nav {
     position: fixed;
@@ -131,12 +167,10 @@ nav ul li a:hover,
 nav ul li a:active {
    transition: 0.5s;
    background-color: var(--accent-color);
-   color: var(--primary-color);
-   border: 1px solid var(--primary-color);
    box-shadow: 0px 0px 8px var(--accent-color);
 }
 
-/* header */
+/*************************** header */
 
 header {
     background: url("../images/uvod-900-vzor.jpg");
@@ -162,7 +196,7 @@ header {
 
 #header-box > * {
     z-index: 50;
-    font-family: 'Ephesis', serif;
+    /* font-family: 'Ephesis', serif; */
     color: var(--primary-color);
     display: grid;
     place-content: center;
@@ -185,7 +219,7 @@ h1 {
     letter-spacing: 2px;
 }
 
-/* Místo konání*/
+/******************** Místo konání ******/
 
 #misto-box {
     place-content: center;
@@ -231,7 +265,85 @@ h1 {
     left: 0;
 }
 
-/* querry pro minimální šířku pro tablety */
+/****************** Program */
+
+#programline hr {
+    border-radius: 0.25em; 
+    background-color: var(--text-color);
+}
+
+#pr-main-line {
+    position: absolute;
+    left: 50%;
+    width: 0.33em; 
+    height: 200px;
+}
+
+.pr-line {
+    height: 0.33em; 
+    width: 100px;
+    margin-bottom: 1em;
+
+}
+
+.pr-line::before {
+    content: "";
+}
+
+/**************** Info ****************/
+
+#info-box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    padding: 0 1em;
+}
+
+.one-info-box {
+    display: grid;
+    gap: 0.66em;
+    margin: 0.5em 0;
+    padding: 0.33em;
+    height: 10em; 
+    align-content: start;
+    /* background-color: var(--background-color); */
+    border: 1px solid var(--text-color);
+    border-radius: 0.25em;
+
+}
+
+.one-info-text {
+    padding: 0.33em;
+    line-height: 1.33em;
+    font-size: 0.66em;
+    letter-spacing: 0;
+}
+
+.one-info-head {
+    display: flex;
+    gap: 0.66em;
+    height: 3.3em;
+}
+
+.one-info-head div {
+    width: 3.3em;
+}
+
+.one-info-head img {
+    height: 100%;
+}
+
+.one-info-head p {
+    padding-top: 0.66em;
+}
+
+/********************* formulář **************************/
+
+form {
+    margin: 0 auto;
+    width: 66%;
+}
+
+/********************** querry pro minimální šířku pro tablety */
 
 @media (max-width: 550px) {
 
@@ -245,9 +357,29 @@ h1 {
     #misto-text {
         font-size: 0.81em;
     }
+
+    /****** Info *******/
+
+    .one-info-head {
+        height: 2.2em;
+    }
+    
+    .one-info-head div {
+        width: 2.2em;
+    }
+    
+    .one-info-head p {
+        padding-top: 0.22em;
+        font-size: 0.81em;
+    }
+
+    .one-info-text {
+        font-size: 0.6em;
+
+    }
 }
 
-/* querry pro minimální šířku pro mobily */
+/***************************** querry pro minimální šířku pro mobily */
 
 @media (max-width: 380px) {
 
@@ -318,9 +450,40 @@ h1 {
     #misto-map {
         height: 8.1em;
     }
+
+    /****** Info *******/
+
+    #info-box {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.66em;
+        padding: 0 0.33em;
+    }
+
+    .one-info-head {
+        height: 1.5em;
+    }
+    
+    .one-info-head div {
+        width: 1.5em;
+    }
+    
+    .one-info-head p {
+        padding-top: 0.11em;
+        font-size: 0.6em;
+    }
+
+    .one-info-text {
+        font-size: 0.6em;
+
+    }
+    
+    .one-info-box {
+        margin: 0 0;
+    
+    }
 }
 
-/* Querry pro desktop */
+/********************************* Querry pro desktop */
 
 @media (min-width: 769px) {
 
@@ -338,5 +501,33 @@ h1 {
         position: relative;
         place-content: center start;
         right: -1.32em;
+    }
+
+    /***** Info *****/
+
+    #info-box {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .one-info-box {
+        height: 13.3em;
+    
+    }
+}
+
+/********************************* Querry pro velké monitory */
+
+@media (min-width: 1081px) {
+
+    body {
+        font-size: 20px;
+    }
+
+    .row {
+        max-width: 1280px;
+    }
+
+    .gallery-box {
+        max-width: 1280px;
     }
 }
