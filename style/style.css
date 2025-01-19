@@ -8,11 +8,20 @@
 
 :root {
     --primary-color: hsl(71, 11%, 39%);
+    --secondary-color: hsl(24, 40%, 77%);
+    --background-color: hsl(67, 31%, 95%);
+    --text-color: hsl(69, 9%, 41%);
+    --accent-color: hsl(22, 39%, 85%);
+
+    
+/* barvy původní
+    --primary-color: hsl(71, 11%, 39%);
     --secondary-color: hsl(24, 23%, 68%);
     --accent-color: hsl(67, 31%, 95%);
     --text-color: hsl(69, 9%, 55%);
-    --background-color: hsl(22, 39%, 85%);
-/* 
+    --background-color: hsl(22, 39%, 85%); */
+
+/* barvy testování
     --primary-color: hsl(71, 11%, 47%);
     --secondary-color: hsl(24, 23%, 68%);
     --accent-color: hsl(67, 26%, 87%);
@@ -127,39 +136,41 @@ nav ul {
     justify-content: right;
     align-content: end;
     gap: 0.66em;
-    padding-right: 0.4em;
+    padding-right: 0.6em;
 }
 
 nav ul li {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 6.66em
+    width: 6.33em
 }
 
 nav ul li a:link,
 nav ul li a:visited {
     display: inline-block;
     text-decoration: none;
-    background-color: var(--background-color);
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 0.7em;
-    box-shadow: 0px 0px 6px var(--background-color);
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.4em;
+    box-shadow: 0px 0px 6px var(--primary-color);
     width: 100%;    
     height: 2.8em;
     line-height: 2.8em;
     text-align: center;
     vertical-align: middle;
-    font-size: 0.88em;
+    font-size: 0.8em;
     transition: 0.5s;
 }
 
 nav ul li a:hover,
 nav ul li a:active {
    transition: 0.5s;
+   color: var(--text-color);
    background-color: var(--accent-color);
    box-shadow: 0px 0px 8px var(--accent-color);
+   border: 1px solid var(--primary-color);
 }
 
 /*************************** header */
@@ -183,6 +194,7 @@ header {
     display: grid;
     gap: 0.33em;
     padding: 0.66em;
+    border-radius: 0.4em;
 
 }
 
@@ -258,9 +270,18 @@ h1 {
 
 /****************** Program */
 
-#programline hr {
+#program {
+    padding: 0.66em 0;
+}
+
+#program-box {
+    margin: 0 auto;
+}
+
+#program-line hr {
     border-radius: 0.25em; 
     background-color: var(--text-color);
+    border: 0;
 }
 
 #pr-main-line {
@@ -272,13 +293,25 @@ h1 {
 
 .pr-line {
     height: 0.33em; 
-    width: 100px;
+    width: 50%;
     margin-bottom: 1em;
+}
+
+#program-layout {
+    display: grid;
+    border: 1px solid var(--text-color);
+    border-radius: 0.25em;
+    width: 100%;
+    max-width: 853px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    padding: 1em;
+    
 
 }
 
-.pr-line::before {
-    content: "";
+#program-line hr:nth-child(even) {
+    margin-left: auto;
 }
 
 /**************** Info ****************/
@@ -332,6 +365,40 @@ h1 {
 form {
     margin: 0 auto;
     width: 66%;
+}
+
+form label {
+    line-height: 1;
+    font-size: 1em;
+}
+
+input[type=radio] {
+    margin-right: 0.33em;
+}
+
+input[type=checkbox] {
+    margin-right: 0.33em;
+}
+
+input[type=submit] {
+    display: inline-block;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 0.7em;
+    box-shadow: 0px 0px 6px var(--background-color);
+    height: 2.8em;
+    line-height: 2.8em;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.88em;
+    transition: 0.5s;
+}
+
+input[type=submit]:hover {
+    transition: 0.5s;
+    background-color: var(--accent-color);
+    box-shadow: 0px 0px 8px var(--accent-color);
 }
 
 /********************** querry pro minimální šířku pro tablety */

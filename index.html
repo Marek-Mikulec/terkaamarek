@@ -71,32 +71,51 @@
 
         <!-- Program -->
 
-        <section class="row" id="program">
-            <h2>Svatební program</h2>
-            <div id="programline">
-                <hr id="pr-main-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-                <hr class="pr-line">
-
+        <section class="gallery" id="program">
+            <div class="row" id="program-box">
+                <h2>Svatební program</h2>
+                <div id="program-layout">
+                    <div id="program-left">
+                        <div class="one-program-box">
+                            <div class="one-program-box-img">
+                                <img src="images/icons/icon-80-vzor.png" alt="">
+                            </div>
+                            <br>0:00</br>lorem</p>
+                        </div>
+                    </div>
+                    <div id="program-line">
+                        <hr id="pr-main-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                        <hr class="pr-line">
+                    </div>
+                    <div id="program-right">
+                        <div class="one-program-box">
+                            <div class="one-program-box-img">
+                                <img src="images/icons/icon-80-vzor.png" alt="">
+                            </div>
+                            <br>0:00</br>lorem</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -164,41 +183,45 @@
 
         <!-- Formulář -->
 
-        <section class="row" id="o-nas">
+        <section class="row" id="formular">
             <h2>Potvrzení účasti</h2>
             <form action="">
                 <input type="text" name="name" id="" value="" placeholder="Jméno a příjmení" required>
 
                 <input type="email" name="email" id="" value="" placeholder="Zadejte e-mail" required>
 
-                <input type="tel" name="phone" id="phone" value="" pattern="\d{9}" maxlength="9" placeholder="Telefonní číslo" required>
+                <input type="tel" name="form-phone" id="phone" value="" pattern="\d{9}" maxlength="9" placeholder="Telefonní číslo" required>
 
-                <label for="partic-yes">
-                    <input type="radio" name="partic" value="yes" id="partic-yes" checked required>Rád dorazím
-                </label>
-                <label for="partic-yes-booth">
-                    <input type="radio" name="partic" value="yes-booth"id="partic-yes-booth" >Rád dorazím s partnerem/kou
-                </label>
-                <label for="partic-no">
-                    <input type="radio" name="partic" value="no"id="partic-no" >Je mi líto, nedorazím
-                </label>
+                <div id="form-partic">
+                    <label for="partic-yes">
+                        <input type="radio" name="partic" value="yes" id="partic-yes" checked required>Rád dorazím
+                    </label>
+                    <label for="partic-yes-booth">
+                        <input type="radio" name="partic" value="yes-booth"id="partic-yes-booth" >Rád dorazím s partnerem/kou
+                    </label>
+                    <label for="partic-no">
+                        <input type="radio" name="partic" value="no"id="partic-no" >Je mi líto, nedorazím
+                    </label>
+                </div>
 
                 <input type="number" name="kids" placeholder="např. 2 děti">
 
-                <label for="kids-3">
-                    <input type="checkbox" name="kids-3" id="kids-3">0 - 3 let
-                </label>
-                <label for="kids-6">
-                    <input type="checkbox" name="kids-6" id="kids-6">4 - 6 let
-                </label>
-                <label for="kids-10">
-                    <input type="checkbox" name="kids-10" id="kids-10">7 - 10 let
-                </label>
-                <label for="kids-more">
-                    <input type="checkbox" name="kids-more" id="kids-more">Více let
-                </label>
+                <div id="form-kids-num">
+                    <label for="kids-3">
+                        <input type="checkbox" name="kids-3" id="kids-3">0 - 3 let
+                    </label>
+                    <label for="kids-6">
+                        <input type="checkbox" name="kids-6" id="kids-6">4 - 6 let
+                    </label>
+                    <label for="kids-10">
+                        <input type="checkbox" name="kids-10" id="kids-10">7 - 10 let
+                    </label>
+                    <label for="kids-more">
+                        <input type="checkbox" name="kids-more" id="kids-more">Více let
+                    </label>
+                </div>
 
-                <textarea name="" id="" rows="5" placeholder="Napište nám poznámku"></textarea>
+                <textarea name="" id="" rows="5" placeholder="Napište nám poznámku. Např. Bezlepkové, vegetarián"></textarea>
                 
                 <input type="submit" name="" id="" value="Odešli">
             </form>

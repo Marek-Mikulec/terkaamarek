@@ -12,7 +12,7 @@ window.addEventListener('scroll', function() {
 
 /** Formulář input phone **/
 
-const phoneInput = document.getElementById('phone');
+const phoneInput = document.getElementById('form-phone');
 
 phoneInput.addEventListener('input', function() {
   // Povolit pouze číslice
