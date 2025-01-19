@@ -4,7 +4,7 @@
 
 window.addEventListener('scroll', function() {
     let scrolled = window.scrollY;
-    let offset = scrolled * 0.3;
+    let offset = scrolled * 0.8;
     document.querySelector('header').style.backgroundPosition = `center calc(50% + ${offset}px)`;
 });
 

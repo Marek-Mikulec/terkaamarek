@@ -1,12 +1,4 @@
 @font-face {
-    font-family: 'Ephesis';
-    src: url('font/Ephesis-Regular.woff2') format('woff2'),
-         url('font/Ephesis-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Lora';
     src: url('font/Lora-VariableFont_wght.woff2') format('woff2'),
          url('font/Lora-VariableFont_wght.woff') format('woff');
@@ -46,7 +38,7 @@ body {
 /* reusable*/
 
 .row {
-    max-width: 900px;
+    max-width: 1280px;
     width: 93.75%;
     margin: 1.32em auto;
     background-color: var(--accent-color);
@@ -72,7 +64,7 @@ h2 {
 
 .gallery-box {
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 1280px;
     width: 93.75%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -109,10 +101,10 @@ nav {
     display: grid;
     grid-auto-flow: column;
     place-content: center;
-    grid-template-columns: 75px 1fr;
-    grid-auto-rows: 60px;
+    grid-template-columns: 4.3em 1fr;
+    grid-auto-rows: 4em;
     gap: 0.4em;
-    max-width: 1080px;  
+    max-width: 1920px;  
     vertical-align: center; 
     margin: 0 auto
 }
@@ -125,7 +117,7 @@ nav {
 }
 
 nav img {
-    max-height: 55px
+    max-height: 3.3em
 }
 
 /**** Nav buttons *****/
@@ -134,7 +126,7 @@ nav ul {
     display: flex;
     justify-content: right;
     align-content: end;
-    gap: 0.4em;
+    gap: 0.66em;
     padding-right: 0.4em;
 }
 
@@ -142,7 +134,7 @@ nav ul li {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px
+    width: 6.66em
 }
 
 nav ul li a:link,
@@ -154,12 +146,12 @@ nav ul li a:visited {
     border: 1px solid var(--primary-color);
     border-radius: 0.7em;
     box-shadow: 0px 0px 6px var(--background-color);
-    width: 95%;    
-    height: 2.5em;
-    line-height: 2.5em;
+    width: 100%;    
+    height: 2.8em;
+    line-height: 2.8em;
     text-align: center;
     vertical-align: middle;
-    font-size: 0.7em;
+    font-size: 0.88em;
     transition: 0.5s;
 }
 
@@ -184,7 +176,7 @@ header {
     position: absolute;
     transform: translate(-50%,-50%);
     width: 90%;
-    max-width: 25em;
+    max-width: 33em;
     background-color: var(--background-color);
     top: 66%;
     left: 50%;
@@ -196,7 +188,6 @@ header {
 
 #header-box > * {
     z-index: 50;
-    /* font-family: 'Ephesis', serif; */
     color: var(--primary-color);
     display: grid;
     place-content: center;
@@ -205,18 +196,18 @@ header {
 }
 
 h1 {
-    font-size: 3em;
-    letter-spacing: 5px;
+    font-size: 2.6em;
+    letter-spacing: 0.06em;
 }
 
 #date {
-    font-size: 2em;
-    letter-spacing: 3px;
+    font-size: 1.7em;
+    letter-spacing: 0.06em;
 }
 
 #slogan {
-    font-size: 1.3em;
-    letter-spacing: 2px;
+    font-size: 1.15em;
+    letter-spacing: 0.03em;
 }
 
 /******************** Místo konání ******/
@@ -314,7 +305,7 @@ h1 {
 .one-info-text {
     padding: 0.33em;
     line-height: 1.33em;
-    font-size: 0.66em;
+    font-size: 0.88em;
     letter-spacing: 0;
 }
 
@@ -352,6 +343,21 @@ form {
         display: none;
     }
 
+    /* Navigace zmenšení loga a textu */
+
+    nav img {
+        max-height: 3em
+    }
+
+    nav ul li {
+        width: 5.88em
+    }
+
+    nav ul li a:link,
+    nav ul li a:visited {
+        font-size: 0.75em;
+    }
+
     /***** Místo konání text *****/
 
     #misto-text {
@@ -374,8 +380,7 @@ form {
     }
 
     .one-info-text {
-        font-size: 0.6em;
-
+        font-size: 0.75em;
     }
 }
 
@@ -406,15 +411,15 @@ form {
 
     /* text na headru */
     h1 {
-        font-size: 2.333em;
+        font-size: 1.75em;
     }
     
     #date {
-        font-size: 1.66em;
+        font-size: 1.16em;
     }
     
     #slogan {
-        font-size: 1em;
+        font-size: 0.77em;
     }
     
    
@@ -469,11 +474,11 @@ form {
     
     .one-info-head p {
         padding-top: 0.11em;
-        font-size: 0.6em;
+        font-size: 0.75em;
     }
 
     .one-info-text {
-        font-size: 0.6em;
+        font-size: 0.75em;
 
     }
     
@@ -517,17 +522,17 @@ form {
 
 /********************************* Querry pro velké monitory */
 
-@media (min-width: 1081px) {
+@media (min-width: 1921px) {
 
     body {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .row {
-        max-width: 1280px;
+        max-width: 1700px;
     }
 
     .gallery-box {
-        max-width: 1280px;
+        max-width: 1700px;
     }
 }
