@@ -17,9 +17,9 @@
                 </div>
                 <ul>
                     <li><a href="#">Úvod</a></li>
-                    <li><a href="#">Místo konání</a></li>
-                    <li><a href="#">Program</a></li>
-                    <li><a href="#">Informace</a></li>
+                    <li><a href="#misto">Místo</a></li>
+                    <li><a href="#program">Program</a></li>
+                    <li><a href="#info">Informace</a></li>
                 </ul>
             </div>
         </nav>
@@ -27,8 +27,10 @@
         <!-- Header -->
         <div id="header-box">
             <h1>Terka a Marek</h1>
-            <p id="date">17. 5. 2025</p>
+            <p id="date">17. května 2025</p>
             <p id="slogan">Lorem ipsum dolor sit amet consectetur.</p>
+            <img src="images/spade-left.png" alt="" id="spade-left">
+            <img src="images/spade-right.png" alt="" id="spade-right">
         </div>
     </header>
     <main>
@@ -80,48 +82,48 @@
                         <div class="one-program-box-img">
                             <img src="images/icons/ico-rings.png" alt="">
                         </div>
-                        <div class="one-program-box-time"><p><strong>13:00</strong></p></div>
-                        <div class="one-program-box-text"><p>Obřad</p></div>
+                        <div><p><strong>13:00</strong></p></div>
+                        <div><p>Obřad</p></div>
                     </div>
 
                     <div class="one-program-box" id="one-program-p2">
                         <div class="one-program-box-img">
                             <img src="images/icons/ico-camera.png" alt="">
                         </div>
-                        <div class="one-program-box-time"><p><strong>14:00</strong></p></div>
-                        <div class="one-program-box-text"><p>Focení</p></div>
+                        <div><p><strong>14:00</strong></p></div>
+                        <div><p>Focení</p></div>
                     </div>
 
                     <div class="one-program-box" id="one-program-p3">
                         <div class="one-program-box-img">
                             <img src="images/icons/ico-cake.png" alt="">
                         </div>
-                        <div class="one-program-box-time"><p><strong>16:00</strong></p></div>
-                        <div class="one-program-box-text"><p>Dort</p></div>
+                        <div><p><strong>16:00</strong></p></div>
+                        <div><p>Dort</p></div>
                     </div>
 
                     <div class="one-program-box" id="one-program-p4">
                         <div class="one-program-box-img">
                             <img src="images/icons/ico-drink.png" alt="">
                         </div>
-                        <div class="one-program-box-time"><p><strong>16:30</strong></p></div>
-                        <div class="one-program-box-text"><p>Přípitek</p></div>
+                        <div><p><strong>16:30</strong></p></div>
+                        <div><p>Přípitek</p></div>
                     </div>
 
                     <div class="one-program-box" id="one-program-p5">
                         <div class="one-program-box-img">
                             <img src="images/icons/ico-cutlery.png" alt="">
                         </div>
-                        <div class="one-program-box-time"><p><strong>17:30</strong></p></div>
-                        <div class="one-program-box-text"><p>Večeře</p></div>
+                        <div><p><strong>17:30</strong></p></div>
+                        <div><p>Večeře</p></div>
                     </div>
 
                     <div class="one-program-box" id="one-program-p6">
                         <div class="one-program-box-img">
                             <img src="images/icons/ico-music.png" alt="">
                         </div>
-                        <div class="one-program-box-time"><p><strong>19:00</strong></p></div>
-                        <div class="one-program-box-text"><p>Volná zábava</p></div>
+                        <div><p><strong>19:00</strong></p></div>
+                        <div><p>Volná zábava</p></div>
                     </div>
 
                     <div id="program-line">
@@ -201,52 +203,68 @@
 
         <!-- Formulář -->
 
-        <section class="row" id="formular">
-            <h2>Potvrzení účasti</h2>
-            <form action="">
-                <input type="text" name="name" id="" value="" placeholder="Jméno a příjmení" required>
+        <section class="gallery" id="formular">
+            <div class="row" id="formular-box">
+                <h2>Potvrzení účasti</h2>
+                <form action="">
+                    <input type="text" name="name" id="" value="" placeholder="Jméno a příjmení" required>
+    
+                    <input type="email" name="email" id="" value="" placeholder="Zadejte e-mail" required>
+    
+                    <input type="tel" name="form-phone" id="phone" value="" pattern="\d{9}" maxlength="9" placeholder="Telefonní číslo" required>
+    
+                    <div id="form-partic">
+                        <label for="partic-yes">
+                            <input type="radio" name="partic" value="yes" id="partic-yes" checked required>Rád dorazím
+                        </label>
+                        <label for="partic-yes-booth">
+                            <input type="radio" name="partic" value="yes-booth"id="partic-yes-booth" >Rád dorazím s partnerem/kou
+                        </label>
+                        <label for="partic-no">
+                            <input type="radio" name="partic" value="no"id="partic-no" >Je mi líto, nedorazím
+                        </label>
+                    </div>
+    
+                    <input type="number" name="kids" placeholder="např. 2 děti">
+    
+                    <div id="form-kids-num">
+                        <label for="kids-3">
+                            <input type="checkbox" name="kids-3" id="kids-3">0 - 3 let
+                        </label>
+                        <label for="kids-6">
+                            <input type="checkbox" name="kids-6" id="kids-6">4 - 6 let
+                        </label>
+                        <label for="kids-10">
+                            <input type="checkbox" name="kids-10" id="kids-10">7 - 10 let
+                        </label>
+                        <label for="kids-more">
+                            <input type="checkbox" name="kids-more" id="kids-more">Více let
+                        </label>
+                    </div>
+    
+                    <textarea name="" id="" rows="5" placeholder="Napište nám poznámku. Např. Bezlepkové, vegetarián"></textarea>
+                    
+                    <input type="submit" name="" id="" value="Odešli">
+                </form>
+            </div>
+        </section>
 
-                <input type="email" name="email" id="" value="" placeholder="Zadejte e-mail" required>
+        <!-- QR kód fotky -->
 
-                <input type="tel" name="form-phone" id="phone" value="" pattern="\d{9}" maxlength="9" placeholder="Telefonní číslo" required>
-
-                <div id="form-partic">
-                    <label for="partic-yes">
-                        <input type="radio" name="partic" value="yes" id="partic-yes" checked required>Rád dorazím
-                    </label>
-                    <label for="partic-yes-booth">
-                        <input type="radio" name="partic" value="yes-booth"id="partic-yes-booth" >Rád dorazím s partnerem/kou
-                    </label>
-                    <label for="partic-no">
-                        <input type="radio" name="partic" value="no"id="partic-no" >Je mi líto, nedorazím
-                    </label>
+        <section class="row" id="qr-photo">
+            <h2>Pošlete nám fotky</h2>
+            <div id="qr-photo-box">
+                <p>Malý návod: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga corrupti quasi voluptas magni a, saepe, similique voluptatem natus maiores ea itaque cumque esse vero eius consequuntur totam sunt! Consequuntur.</p>
+                <div id="qr-photo-box-img">
+                    <img src="images/qr-code-photo.jpg" alt="Terka a Marek QR kód na fotky">
                 </div>
 
-                <input type="number" name="kids" placeholder="např. 2 děti">
-
-                <div id="form-kids-num">
-                    <label for="kids-3">
-                        <input type="checkbox" name="kids-3" id="kids-3">0 - 3 let
-                    </label>
-                    <label for="kids-6">
-                        <input type="checkbox" name="kids-6" id="kids-6">4 - 6 let
-                    </label>
-                    <label for="kids-10">
-                        <input type="checkbox" name="kids-10" id="kids-10">7 - 10 let
-                    </label>
-                    <label for="kids-more">
-                        <input type="checkbox" name="kids-more" id="kids-more">Více let
-                    </label>
-                </div>
-
-                <textarea name="" id="" rows="5" placeholder="Napište nám poznámku. Např. Bezlepkové, vegetarián"></textarea>
-                
-                <input type="submit" name="" id="" value="Odešli">
-            </form>
+            </div>
         </section>
         
     </main>
     <footer>
+        <p>Nemáme nikde Mikulcovi</p>
         <p>Příliš žluťoučký kůň pěl ďábelské ódy</p>
         <p>PŘÍLIŠ ŽLUŤOUČKÝ KŮŇ PĚL ĎÁBELSKÉ ÓDY</p>
     </footer>

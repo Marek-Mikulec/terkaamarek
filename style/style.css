@@ -13,7 +13,6 @@
     --text-color: hsl(69, 9%, 34%);
     --accent-color: hsl(22, 39%, 85%);
 
-    
 /* barvy původní
     --primary-color: hsl(71, 11%, 39%);
     --secondary-color: hsl(24, 23%, 68%);
@@ -34,6 +33,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    scroll-padding-top: 6em;
     font-family: 'Lora', sans-serif;
     letter-spacing: 1px;
     line-height: 1;
@@ -47,8 +47,8 @@ body {
 /* reusable*/
 
 .row {
-    max-width: 1280px;
-    width: 93.75%;
+    max-width: 1066px;
+    width: calc(100% - 1.32em);
     margin: 1.32em auto;
     background-color: var(--accent-color);
     display: grid;
@@ -58,7 +58,7 @@ body {
 
 .row > * {
     display: grid;
-    gap: 0.33em;
+    gap: 0.3em;
 }
 
 h2 {
@@ -69,16 +69,21 @@ h2 {
 
 .gallery {
     background-color: var(--primary-color);
+    padding: 0.6em 0;
+}
+
+.gallery > * {
+    margin: 0 auto;
+    border-radius: 0.25em;
+    max-width: 710.6px;
 }
 
 .gallery-box {
-    margin: 0 auto;
-    max-width: 1280px;
-    width: 93.75%;
+    max-width: 1154.9px;
+    width: calc(100% - 1.32em);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.66em;
-    padding: 0.66em 0;
 }
 
 .gallery-box > * {
@@ -106,14 +111,13 @@ nav {
 }
 
 #navbar {
-    
     display: grid;
     grid-auto-flow: column;
     place-content: center;
-    grid-template-columns: 4.3em 1fr;
-    grid-auto-rows: 4em;
-    gap: 0.4em;
-    max-width: 1920px;  
+    grid-template-columns: 5em 1fr;
+    grid-auto-rows: 5em;
+    gap: 1em;
+    max-width: 1280px;  
     vertical-align: center; 
     margin: 0 auto
 }
@@ -123,10 +127,11 @@ nav {
 #nav-logo {
     display: grid;
     place-content: center;
+    padding-left: 1em;
 }
 
 nav img {
-    max-height: 3.3em
+    max-height: 4em
 }
 
 /**** Nav buttons *****/
@@ -135,15 +140,15 @@ nav ul {
     display: flex;
     justify-content: right;
     align-content: end;
-    gap: 0.66em;
-    padding-right: 0.6em;
+    gap: 1em;
+    padding-right: 1em;
 }
 
 nav ul li {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 6.33em
+    width: 6em
 }
 
 nav ul li a:link,
@@ -156,11 +161,11 @@ nav ul li a:visited {
     border-radius: 0.4em;
     box-shadow: 0px 0px 6px var(--primary-color);
     width: 100%;    
-    height: 2.8em;
-    line-height: 2.8em;
+    height: 3em;
+    line-height: 3em;
     text-align: center;
     vertical-align: middle;
-    font-size: 0.8em;
+    font-size: 0.88em;
     transition: 0.5s;
 }
 
@@ -186,13 +191,13 @@ header {
 #header-box {
     position: absolute;
     transform: translate(-50%,-50%);
-    width: 90%;
+    width: calc(100% - 8em);
     max-width: 33em;
     background-color: var(--background-color);
     top: 66%;
     left: 50%;
     display: grid;
-    gap: 0.33em;
+    gap: 0.44em;
     padding: 0.66em;
     border-radius: 0.4em;
 
@@ -208,18 +213,38 @@ header {
 }
 
 h1 {
-    font-size: 2.6em;
-    letter-spacing: 0.06em;
+    font-size: 2em;
+    letter-spacing: 0.02em;
 }
 
 #date {
-    font-size: 1.7em;
-    letter-spacing: 0.06em;
+    font-size: 1.33em;
+    letter-spacing: 0.03em;
 }
 
 #slogan {
-    font-size: 1.15em;
+    font-size: 1em;
     letter-spacing: 0.03em;
+}
+
+/** header listy */
+
+#spade-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3em;
+    height: auto;
+    transform: translate(-100%,-25%);
+}
+
+#spade-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3em;
+    height: auto;
+    transform: translate(100%, 25%);
 }
 
 /******************** Místo konání ******/
@@ -270,16 +295,6 @@ h1 {
 
 /****************** Program */
 
-#program {
-    padding: 0.66em 0;
-}
-
-#program-box {
-    margin: 0 auto;
-    max-width: 56.25em;
-    border-radius: 0.25em;
-}
-
 #program-line hr {
     border-radius: 0.25em; 
     background-color: var(--text-color);
@@ -306,7 +321,7 @@ h1 {
     border: 1px solid var(--text-color);
     border-radius: 0.25em;
     width: calc(100% - 2em);
-    max-width: 54.25em;
+    max-width: 473.7px;
     grid-template-columns: 8.7425em 1fr 8.7425em;
     grid-template-areas: "p1 tr p2" "p3 tr p4" "p5 tr p6" ;
     margin: 1em auto 0 auto;
@@ -380,12 +395,12 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
     padding: 0 1em;
+    margin-top: 1em;
 }
 
 .one-info-box {
     display: grid;
     gap: 0.66em;
-    margin: 0.5em 0;
     padding: 0.33em;
     height: 10em; 
     align-content: start;
@@ -423,8 +438,16 @@ h1 {
 /********************* formulář **************************/
 
 form {
-    margin: 0 auto;
-    width: 66%;
+    display: grid;
+    border: 1px solid var(--text-color);
+    border-radius: 0.25em;
+    width: calc(100% - 2em);
+    max-width: 473.7px;
+    grid-template-columns: 1fr;
+    margin: 1em auto 0 auto;
+    padding: 1em;
+    column-gap: 0.66em;
+    width: 100%;
 }
 
 form label {
@@ -461,9 +484,26 @@ input[type=submit]:hover {
     box-shadow: 0px 0px 8px var(--accent-color);
 }
 
+/********************* formulář **************************/
+
+#qr-photo-box {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2fr 1fr;
+    gap: 1em;
+}
+
+#qr-photo-box-img img {
+    width: 75%;
+}
+
 /********************** querry pro minimální šířku pro tablety */
 
 @media (max-width: 550px) {
+
+    * {
+        scroll-padding-top: 4.7em;
+    }
 
     /* Navigace Zmizení úvodu */
     nav ul li:first-child {
@@ -472,17 +512,30 @@ input[type=submit]:hover {
 
     /* Navigace zmenšení loga a textu */
 
+    #navbar {
+        grid-template-columns: 3.75em 1fr;
+        grid-auto-rows: 3.75em;
+        gap: 0.75em;
+    }
+
     nav img {
-        max-height: 3em
+        max-height: 3.375em
+    }
+
+    nav ul {
+        gap: 0.75em;
+        padding-right: 0.75em;
     }
 
     nav ul li {
-        width: 5.88em
+        width: 4.5em
     }
 
     nav ul li a:link,
-    nav ul li a:visited {
-        font-size: 0.75em;
+    nav ul li a:visited {    
+        height: 2.25em;
+        line-height: 2.25em;
+        font-size: 0.66em;
     }
 
     /***** Místo konání text *****/
@@ -530,31 +583,31 @@ input[type=submit]:hover {
 
     #navbar {
         display: block;
-        height: 60px;
+        height: 3.75em;
     }
 
     nav ul {
         justify-content: center;
         align-content: end;
-        gap: 0.4em;
-        padding-right: 0;
+        gap: 0.75em;
+        padding-left: 0.75em;
     }
     
     nav ul li {
-        width: 95px
+        width: 100%
     }
 
     /* text na headru */
     h1 {
-        font-size: 1.75em;
+        font-size: 1.33em;
     }
     
     #date {
-        font-size: 1.16em;
+        font-size: 1em;
     }
     
     #slogan {
-        font-size: 0.77em;
+        font-size: 0.75em;
     }
     
    
@@ -695,10 +748,22 @@ input[type=submit]:hover {
     }
 
     .row {
-        max-width: 1700px;
+        max-width: 1533px;
     }
 
     .gallery-box {
-        max-width: 1700px;
+        max-width: 1628.8125px;
+    }
+
+    #navbar {
+        max-width: 1920px;
+    }
+
+    #program-box {
+        max-width: 1022px;
+    }
+
+    #program-layout {
+        max-width: 681.3px;
     }
 }
