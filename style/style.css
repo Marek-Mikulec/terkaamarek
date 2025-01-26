@@ -53,7 +53,7 @@ body {
     background-color: var(--accent-color);
     display: grid;
     gap: 0.66em;
-    padding: 0.66em;
+    padding: 1em;
 }
 
 .row > * {
@@ -65,11 +65,18 @@ h2 {
     text-align: center;
 }
 
+main p {
+    font-size: 1em;
+    letter-spacing: 0.01em;
+    word-spacing: 0.015em;
+    line-height: 1.3em;
+    }
+
 /******************* Galerie ****************/
 
 .gallery {
     background-color: var(--primary-color);
-    padding: 0.6em 0;
+    padding: 0.66em 0;
 }
 
 .gallery > * {
@@ -259,6 +266,11 @@ h1 {
     display: grid;
     place-content: center;
     gap: 0.33em;
+}
+
+#misto-text p {
+    line-height: 1;
+
 }
 
 /***** místo konání img *****/
@@ -484,17 +496,88 @@ input[type=submit]:hover {
     box-shadow: 0px 0px 8px var(--accent-color);
 }
 
-/********************* formulář **************************/
+/********************* QR kód foto **************************/
 
 #qr-photo-box {
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     gap: 1em;
 }
 
+#qr-photo-box p {
+    font-size: 1em;
+    letter-spacing: 0.01em;
+    word-spacing: 0.015em;
+    padding: 1em;
+    line-height: 1.3em;
+    align-content: start;
+}
+
+
+#qr-photo-box-img {
+    width: 100%;
+}
+
 #qr-photo-box-img img {
-    width: 75%;
+    width: calc(100% - 1em);
+    border: 1px solid var(--text-color);
+    border-radius: 0.25em;
+    margin: 1em;
+}
+
+/************************ footer **********************/
+
+footer {
+    height: calc(100vh - 5em);
+    margin: 0 auto;
+}
+
+#footer-box {
+    margin: 2em;
+    max-width: 100%;
+    height: 100%;
+    padding: 2em 0;
+}
+
+#footer-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    place-content: center;
+    max-width: 1066px;
+    border: 1px solid var(--text-color);
+    border-radius: 0.25em;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#footer-layout > * {
+    display: grid;
+    place-content: center;
+}
+
+#footer-layout p {
+    font-size: 2em;
+    letter-spacing: 0.02em;
+    word-spacing: 0.03em;
+    padding: 2em;
+    line-height: 1.3em;
+    text-align: center;
+    align-content: start;
+}
+
+#footer-logo {
+ max-width: 100%;
+ width: 100%;
+ place-content: center;
+}
+
+#footer-logo img {
+    max-width: 500px;
+    width: 90%;
+    margin: 0 auto;
+
 }
 
 /********************** querry pro minimální šířku pro tablety */
@@ -538,6 +621,20 @@ input[type=submit]:hover {
         font-size: 0.66em;
     }
 
+    /**** footer velikost k navigaci *******/
+    
+    footer {
+        height: calc(100vh - 4.5em);
+    }
+
+    /*** footer velikost písma ****/
+
+    #footer-layout p {
+        font-size: 1.75em;
+        letter-spacing: 0.0175em;
+        padding: 1.75em;
+    }
+
     /***** Místo konání text *****/
 
     #misto-text {
@@ -570,6 +667,14 @@ input[type=submit]:hover {
     .one-info-text {
         font-size: 0.75em;
     }
+
+    /********************* QR kód foto *******/
+
+    #qr-photo-box {
+        grid-template-columns: 1.66fr 1fr;
+        gap: 0;
+    }
+
 }
 
 /***************************** querry pro minimální šířku pro mobily */
@@ -595,6 +700,14 @@ input[type=submit]:hover {
     
     nav ul li {
         width: 100%
+    }
+
+    /*** footer velikost písma ****/
+
+    #footer-layout p {
+        font-size: 1.3em;
+        letter-spacing: 0.013em;
+        padding: 1.3em;
     }
 
     /* text na headru */
@@ -694,6 +807,9 @@ input[type=submit]:hover {
     .one-info-head p {
         padding-top: 0.11em;
         font-size: 0.75em;
+        letter-spacing: 0.0075em;
+        word-spacing: 0.0075em;
+        line-height: 1.3em;
     }
 
     .one-info-text {
@@ -704,6 +820,27 @@ input[type=submit]:hover {
     .one-info-box {
         margin: 0 0;
     
+    }
+
+    /********************* QR kód foto *******/
+
+    #qr-photo-box {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        gap: 0;
+        
+    }
+   
+    #qr-photo-box-img {
+        margin: 0 auto;
+        display: grid;
+        place-content: center;
+    }
+
+    #qr-photo-box-img img {
+        width: calc(66% - 4em);
+        min-width: 200px;
+        margin: 0 auto;
     }
 }
 
@@ -765,5 +902,9 @@ input[type=submit]:hover {
 
     #program-layout {
         max-width: 681.3px;
+    }
+
+    #footer-layout {
+        max-width: 1533px;
     }
 }
