@@ -206,26 +206,36 @@
         <section class="gallery" id="formular">
             <div class="row" id="formular-box">
                 <h2>Potvrzení účasti</h2>
-                <form action="">
+                <form action="" id="formular-layout">
                     <input type="text" name="name" id="" value="" placeholder="Jméno a příjmení" required>
     
-                    <input type="email" name="email" id="" value="" placeholder="Zadejte e-mail" required>
+                    <input type="email" name="email" id="form-email" value="" placeholder="E-mail">
     
-                    <input type="tel" name="form-phone" id="phone" value="" pattern="\d{9}" maxlength="9" placeholder="Telefonní číslo" required>
+                    <input type="tel" name="form-phone" id="form-phone" value="" pattern="\d{3} \d{3} \d{3}" maxlength="12" placeholder="Telefonní číslo">
+
+                    <hr>
+
+                    <p>Dorazíte? nebo tak něco.</p>
     
                     <div id="form-partic">
                         <label for="partic-yes">
                             <input type="radio" name="partic" value="yes" id="partic-yes" checked required>Rád dorazím
                         </label>
                         <label for="partic-yes-booth">
-                            <input type="radio" name="partic" value="yes-booth"id="partic-yes-booth" >Rád dorazím s partnerem/kou
+                            <input type="radio" name="partic" value="yes-booth"id="partic-yes-booth" >Rád dorazím s doprovodem
                         </label>
                         <label for="partic-no">
                             <input type="radio" name="partic" value="no"id="partic-no" >Je mi líto, nedorazím
                         </label>
                     </div>
+                    
+                    <hr>
+
+                    <p>Kolik je dětí? nějaký text</p>
     
                     <input type="number" name="kids" placeholder="např. 2 děti">
+
+                    <p>Kolik těm dětem je? taky nějaký text, že můžou dopsat do poznámky</p>
     
                     <div id="form-kids-num">
                         <label for="kids-3">
@@ -242,9 +252,18 @@
                         </label>
                     </div>
     
-                    <textarea name="" id="" rows="5" placeholder="Napište nám poznámku. Např. Bezlepkové, vegetarián"></textarea>
+                    <hr>
+
+                    <p>Napište nám něco sem jako třeba pozvánka?</p>
+
+                    <textarea name="" id="" rows="5" placeholder="Napište nám poznámku. Např. Bezlepkové, vegetarián, nebo tak něco. Můžem sem napsat co chceme. Počet dětí, atd."></textarea>
+
+                    <hr>
                     
-                    <input type="submit" name="" id="" value="Odešli">
+                    <div id="form-submit">
+                        <input type="submit" name="" id="" value="Odešli">
+
+                    </div>
                 </form>
             </div>
         </section>

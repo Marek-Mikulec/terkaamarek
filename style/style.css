@@ -65,7 +65,7 @@ h2 {
     text-align: center;
 }
 
-main p {
+main p, textarea {
     font-size: 1em;
     letter-spacing: 0.01em;
     word-spacing: 0.015em;
@@ -449,7 +449,7 @@ h1 {
 
 /********************* formulář **************************/
 
-form {
+#formular-layout {
     display: grid;
     border: 1px solid var(--text-color);
     border-radius: 0.25em;
@@ -458,35 +458,74 @@ form {
     grid-template-columns: 1fr;
     margin: 1em auto 0 auto;
     padding: 1em;
-    column-gap: 0.66em;
-    width: 100%;
+    gap: 0.66em;
 }
 
 form label {
     line-height: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    height: 2em;
+    padding: 0.5em;
     font-size: 1em;
+    border: 2px solid var(--text-color);
+    border-radius: 0.35em;
 }
 
-input[type=radio] {
+#form-partic, #form-kids-num {
+    display: grid;
+    gap: 0.66em;
+}
+
+#form-partic label, #form-kids-num label {
+    border: 2px solid var(--text-color);
+    border-radius: 0.35em;
+    height: 2em;
+    padding-left: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#form-kids-num {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+input[type=radio], input[type=checkbox] {
     margin-right: 0.33em;
 }
 
-input[type=checkbox] {
-    margin-right: 0.33em;
+textarea {
+    padding: 0.5em 1em;
+    max-width: 100%;
+    height: 6em;
+    border: 2px solid var(--text-color);
+    resize: vertical;
+}
+
+#form-submit {
+    display: grid;
+    place-content: center;
+    width: 100%;
+
 }
 
 input[type=submit] {
-    display: inline-block;
     background-color: var(--background-color);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
     border-radius: 0.7em;
     box-shadow: 0px 0px 6px var(--background-color);
-    height: 2.8em;
-    line-height: 2.8em;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 0.88em;
+    padding: 0;
+    width: 7em;
+    height: 2.33em;
+    line-height: 2.33em;
+    font-size: 1.33em;
     transition: 0.5s;
 }
 
@@ -494,6 +533,15 @@ input[type=submit]:hover {
     transition: 0.5s;
     background-color: var(--accent-color);
     box-shadow: 0px 0px 8px var(--accent-color);
+}
+
+form hr {
+    width: calc(100% + 2em);
+    height: 1px;
+    background-color: var(--text-color);
+    border: 0;
+    transform: translate(-1em, 0);
+    margin: 0.33em 0;
 }
 
 /********************* QR kód foto **************************/
@@ -588,6 +636,11 @@ footer {
         scroll-padding-top: 4.7em;
     }
 
+    .gallery .row {
+        padding-left: 0em;
+        padding-right: 0em;
+    }
+
     /* Navigace Zmizení úvodu */
     nav ul li:first-child {
         display: none;
@@ -673,6 +726,14 @@ footer {
     #qr-photo-box {
         grid-template-columns: 1.66fr 1fr;
         gap: 0;
+        margin-right: 1em;
+    }
+
+    /*************** footer ************/
+
+    #footer-box {
+        margin-left: 1.66em;
+        margin-right: 1.66e,;
     }
 
 }
@@ -822,6 +883,16 @@ footer {
     
     }
 
+    /****** formulář ********/
+
+    #form-partic label, #form-kids-num label {
+        font-size: 0.8em;
+        padding-left: 0.4;
+        gap: 0;
+        height: 2.4em;
+        line-height: 1.2;
+    }
+
     /********************* QR kód foto *******/
 
     #qr-photo-box {
@@ -835,6 +906,7 @@ footer {
         margin: 0 auto;
         display: grid;
         place-content: center;
+        margin-right: 0em;
     }
 
     #qr-photo-box-img img {
@@ -884,7 +956,7 @@ footer {
         font-size: 24px;
     }
 
-    .row {
+    .row, #footer-layout {
         max-width: 1533px;
     }
 
@@ -896,15 +968,11 @@ footer {
         max-width: 1920px;
     }
 
-    #program-box {
+    #program-box, #formular-box {
         max-width: 1022px;
     }
 
-    #program-layout {
+    #program-layout, #formular-layout {
         max-width: 681.3px;
-    }
-
-    #footer-layout {
-        max-width: 1533px;
     }
 }
