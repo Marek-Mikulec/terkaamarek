@@ -7,25 +7,11 @@
 }
 
 :root {
-    --primary-color: hsl(71, 11%, 39%);
-    --secondary-color: hsl(24, 40%, 77%);
-    --background-color: hsl(67, 31%, 95%);
-    --text-color: hsl(69, 9%, 34%);
-    --accent-color: hsl(22, 39%, 85%);
-
-/* barvy původní
-    --primary-color: hsl(71, 11%, 39%);
-    --secondary-color: hsl(24, 23%, 68%);
-    --accent-color: hsl(67, 31%, 95%);
-    --text-color: hsl(69, 9%, 55%);
-    --background-color: hsl(22, 39%, 85%); */
-
-/* barvy testování
-    --primary-color: hsl(71, 11%, 47%);
-    --secondary-color: hsl(24, 23%, 68%);
-    --accent-color: hsl(67, 26%, 87%);
-    --text-color: hsl(69, 9%, 47%);
-    --background-color: hsl(22, 39%, 97%); */
+--primary-color: hsl(71, 11%, 45%);
+--secondary-color: hsl(58, 42%, 87%);
+--accent-color: hsl(30, 45%, 95%);
+--text-color: hsl(69, 9%, 33%);
+--background-color: hsl(22, 39%, 90%); 
 }
 
 * {
@@ -40,7 +26,7 @@
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: #fff;
     color: var(--text-color);
 }
 
@@ -50,10 +36,12 @@ body {
     max-width: 1066px;
     width: calc(100% - 1.32em);
     margin: 1.32em auto;
-    background-color: var(--accent-color);
+    background-color: var(--background-color);
     display: grid;
     gap: 0.66em;
     padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0px 0px 10px var(--background-color);
 }
 
 .row > * {
@@ -62,11 +50,13 @@ body {
 }
 
 .narrow {
-    border: 1px solid var(--text-color);
-    border-radius: 0.25em;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.66em;
     max-width: 710.6px;
     width: calc(100% - 1.32em);
     margin: 0 auto;
+    margin-top: 0.66em;
+    /* background-color: var(--accent-color); */
 }
 
 .narrow p {
@@ -92,15 +82,20 @@ main p, textarea {
 /******************* Galerie ****************/
 
 .gallery {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     padding: 0.66em 0;
 }
 
 .gallery > * {
     margin: 0 auto;
-    border-radius: 0.25em;
+    border-radius: 1em;
     max-width: 710.6px;
 }
+
+.gallery .row {
+    background-color: var(--background-color);
+    box-shadow: 0px 0px 10px var(--background-color);
+} 
 
 .gallery-box {
     max-width: 1154.9px;
@@ -138,7 +133,7 @@ nav {
     display: grid;
     grid-auto-flow: column;
     place-content: center;
-    grid-template-columns: 5em 1fr;
+    grid-template-columns: minmax(auto, 7.5em) 1fr;
     grid-auto-rows: 5em;
     gap: 1em;
     max-width: 1280px;  
@@ -149,13 +144,20 @@ nav {
 /**** Nav Logo ****/
 
 #nav-logo {
-    display: grid;
-    place-content: center;
-    padding-left: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0.66em;
+    left: 0.66em;
+    height: 5em;
+    z-index: 101;
+    flex: 0 1 7.5em;
 }
 
 nav img {
-    max-height: 4em
+     width: 80%;
+     max-width: 7.5em;
 }
 
 /**** Nav buttons *****/
@@ -172,23 +174,25 @@ nav ul li {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 6em
+    flex: 0 1 6em;
 }
 
 nav ul li a:link,
 nav ul li a:visited {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     background-color: var(--primary-color);
-    color: var(--background-color);
-    border: 1px solid var(--secondary-color);
-    border-radius: 0.4em;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 1em;
     box-shadow: 0px 0px 6px var(--primary-color);
+    max-width: 7.5em;
+    min-width: 6em;
     width: 100%;    
     height: 3em;
     line-height: 3em;
-    text-align: center;
-    vertical-align: middle;
     font-size: 0.88em;
     transition: 0.5s;
 }
@@ -196,10 +200,33 @@ nav ul li a:visited {
 nav ul li a:hover,
 nav ul li a:active {
    transition: 0.5s;
-   color: var(--text-color);
-   background-color: var(--accent-color);
-   box-shadow: 0px 0px 8px var(--accent-color);
-   border: 1px solid var(--primary-color);
+   color: var(--primary-color);
+   background-color: #fff;
+   box-shadow: 0px 0px 8px #fff;
+   border: 2px solid var(--primary-color);
+}
+
+/***** nav shape ****/
+
+.nav-shape {
+    position: absolute;
+    top: 5em;
+    left: 0em;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.nav-shape svg {
+    position: relative;
+    display: block;
+    width: calc(199% + 1.3px);
+    height: 1.66em;
+    transform: rotateY(180deg);
+}
+
+.nav-shape .shape-fill {
+    fill: var(--secondary-color);
 }
 
 /*************************** header */
@@ -217,13 +244,14 @@ header {
     transform: translate(-50%,-50%);
     width: calc(100% - 8em);
     max-width: 33em;
-    background-color: var(--background-color);
+    background-color: var(--secondary-color);
     top: 66%;
     left: 50%;
     display: grid;
     gap: 0.44em;
     padding: 0.66em;
-    border-radius: 0.4em;
+    border: 0.25em solid var(--primary-color);
+    border-radius: 1em;
 
 }
 
@@ -259,7 +287,7 @@ h1 {
     left: 0;
     width: 3em;
     height: auto;
-    transform: translate(-100%,-25%);
+    transform: translate(calc(-100% - 0.25em),-25%);
 }
 
 #spade-right {
@@ -268,7 +296,7 @@ h1 {
     right: 0;
     width: 3em;
     height: auto;
-    transform: translate(100%, 25%);
+    transform: translate(calc(100% + 0.25em), 25%);
 }
 
 /******************** Místo konání ******/
@@ -347,8 +375,9 @@ h1 {
 
 #program-layout {
     display: grid;
-    border: 1px solid var(--text-color);
-    border-radius: 0.25em;
+    /* background-color: var(--accent-color); */
+    border: 2px solid var(--primary-color);
+    border-radius: 0.66em;
     width: calc(100% - 2em);
     max-width: 473.7px;
     grid-template-columns: 8.7425em 1fr 8.7425em;
@@ -400,7 +429,6 @@ h1 {
     grid-auto-flow: row;
     grid-auto-rows: 4em 1em 1em;
     gap: 0.33em;
-    border-radius: 0.25em;
     padding: 1em 0;
     margin-bottom: 2.914em;
 }
@@ -433,9 +461,9 @@ h1 {
     padding: 0.33em;
     min-height: 13.3em; 
     align-content: start;
-    /* background-color: var(--background-color); */
-    border: 1px solid var(--text-color);
-    border-radius: 0.25em;
+    /* background-color: var(--accent-color); */
+    border: 2px solid var(--primary-color);
+    border-radius: 0.66em;
 
 }
 
@@ -451,6 +479,8 @@ h1 {
     display: flex;
     gap: 0.66em;
     height: 3em;
+    padding-left: 0.66em;
+    padding-top: 0.33em;
 }
 
 .one-info-head div {
@@ -488,8 +518,8 @@ h1 {
 
 #formular-layout {
     display: grid;
-    border: 1px solid var(--text-color);
-    border-radius: 0.25em;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.66em;
     width: calc(100% - 2em);
     max-width: 473.7px;
     grid-template-columns: 1fr;
@@ -511,8 +541,10 @@ input {
     height: 2em;
     padding: 0.5em;
     font-size: 1em;
-    border: 2px solid var(--text-color);
-    border-radius: 0.35em;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.5em;
+    background: var(--accent-color);
+    transition: 0.5s;
 }
 
 #form-partic, #form-kids-num {
@@ -521,12 +553,40 @@ input {
 }
 
 #form-partic label, #form-kids-num label {
-    border: 2px solid var(--text-color);
-    border-radius: 0.35em;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.5em;
     height: 2em;
     padding-left: 0.5em;
     font-size: 1em;
     cursor: pointer;
+    background: var(--accent-color);
+    transition: 0.5s;
+}
+
+#form-partic label:hover, #form-kids-num label:hover, textarea:hover, input[type=text]:hover, input[type=email]:hover, input[type=tel]:hover, input[type=number]:hover {
+    transition: 0.5s;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    background: var(--primary-color);
+    box-shadow: 0px 0px 6px var(--primary-color);
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+    color: var(--accent-color);
+    transition: 0.5s;
+
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="number"]:focus, textarea:focus {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    transition: 0.5s;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+    color: var(--text-color);
+
 }
 
 #form-kids-num {
@@ -541,8 +601,11 @@ textarea {
     padding: 0.5em 1em;
     max-width: 100%;
     height: 6em;
-    border: 2px solid var(--text-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 0.33em;
     resize: vertical;
+    background: var(--accent-color);
+    transition: 0.5s;
 }
 
 #form-submit {
@@ -552,12 +615,15 @@ textarea {
 
 }
 
-input[type=submit] {
-    background-color: var(--background-color);
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 0.7em;
-    box-shadow: 0px 0px 6px var(--background-color);
+#form-submit button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 1em;
+    box-shadow: 0px 0px 6px var(--primary-color);
     padding: 0;
     width: 7em;
     height: 2.33em;
@@ -566,16 +632,18 @@ input[type=submit] {
     transition: 0.5s;
 }
 
-input[type=submit]:hover {
+#form-submit button:hover {
     transition: 0.5s;
-    background-color: var(--accent-color);
-    box-shadow: 0px 0px 8px var(--accent-color);
+    color: var(--primary-color);
+    background-color: #fff;
+    box-shadow: 0px 0px 8px #fff;
+    border: 2px solid var(--primary-color);
 }
 
 form hr {
     width: calc(100% + 2em);
     height: 1px;
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
     border: 0;
     transform: translate(-1em, 0);
     margin: 0.33em 0;
@@ -606,8 +674,8 @@ form hr {
 
 #qr-photo-box-img img {
     width: calc(100% - 1em);
-    border: 1px solid var(--text-color);
-    border-radius: 0.25em;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.66em;
     margin: 1em;
 }
 
@@ -631,8 +699,8 @@ footer {
     grid-template-rows: 2fr 1fr;
     place-content: center;
     max-width: 1066px;
-    border: 1px solid var(--text-color);
-    border-radius: 0.25em;
+    border: 2px solid var(--primary-color);
+    border-radius: 1em;
     height: 100%;
     margin: 0 auto;
 }
@@ -683,33 +751,15 @@ footer {
         display: none;
     }
 
-    /* Navigace zmenšení loga a textu */
+    /**** navigace zakotvení loga ***/
 
-    #navbar {
-        grid-template-columns: 3.75em 1fr;
-        grid-auto-rows: 3.75em;
-        gap: 0.75em;
+    #nav-logo {
+        top: 0;
     }
 
     nav img {
-        max-height: 3.375em
-    }
-
-    nav ul {
-        gap: 0.75em;
-        padding-right: 0.75em;
-    }
-
-    nav ul li {
-        width: 4.5em
-    }
-
-    nav ul li a:link,
-    nav ul li a:visited {    
-        height: 2.25em;
-        line-height: 2.25em;
-        font-size: 0.66em;
-    }
+        max-width: 5em;
+   }
 
     /**** footer velikost k navigaci *******/
     
@@ -800,6 +850,10 @@ footer {
         width: 100%
     }
 
+    .nav-shape {
+        top: 3.75em;
+    } */
+
     /*** footer velikost písma ****/
 
     #footer-layout p {
@@ -862,7 +916,7 @@ footer {
     }
 
     .one-program-box {
-        border: 1px solid var(--text-color);
+        border: 2px solid var(--primary-color);
         margin-bottom: 0em;
         width: 8.7425em;
     }
@@ -928,6 +982,10 @@ footer {
         gap: 0;
         height: 2.4em;
         line-height: 1.2;
+    }
+
+    textarea {
+        height: 9em;
     }
 
     /********************* QR kód foto *******/
@@ -996,6 +1054,10 @@ footer {
 /********************************* Querry pro velké monitory */
 
 @media (min-width: 1921px) {
+
+    * {
+        scroll-padding-top: 9em;
+    }
 
     body {
         font-size: 24px;

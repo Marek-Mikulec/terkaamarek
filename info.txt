@@ -1,6 +1,7 @@
 --------- Potřeba dodělat
-- Barvy a grafika + pozadí
-- barvy tlačítka + tlačítko do formuláře
+- formulář
+    - Blbne :focus u inputů email, tel, text, atd. - špatný rámeček
+    - Hvězdičky jako povinné informace
 - Ikony do infa, logo malé i velké a designové listy + přebarvit
 - favikona
 - Sekce o nás - text + formát
@@ -22,10 +23,7 @@
 
 - Galerie
     - funkční galerie
-- Formulář
-    - Email NEBO telefon
 - Grafické prvky
-    - Hezčí navigace
     - listy na pozadí
 
 --------- Možná později
@@ -42,3 +40,4 @@
 - nemáme nikde luxusní katering
 
 - odebral jsem info box "zvířata"
+- je povinný pouze e-mail - odstranil jsem JS pro "email NEBO telefon"

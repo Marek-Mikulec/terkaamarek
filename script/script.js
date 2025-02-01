@@ -23,17 +23,3 @@ phoneInput.addEventListener('input', () => {
     }
     phoneInput.value = value;
 });
-
-/** Formulář input vyplněn alespoň jeden údaj **/
-
-const form = document.getElementById("formular-layout");
-
-form.addEventListener("submit", function(event) {
-    const email = document.getElementById("form-email").value.trim();
-    const phone = document.getElementById("form-phone").value.trim();
-
-    if (!email && !phone) {
-        event.preventDefault(); // Zabraň odeslání formuláře
-        alert("Vyplňte prosím alespoň e-mail nebo telefonní číslo.");
-    }
-});
