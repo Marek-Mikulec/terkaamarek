@@ -61,8 +61,25 @@ body {
     gap: 0.3em;
 }
 
+.narrow {
+    border: 1px solid var(--text-color);
+    border-radius: 0.25em;
+    max-width: 710.6px;
+    width: calc(100% - 1.32em);
+    margin: 0 auto;
+}
+
+.narrow p {
+    padding: 1em;
+}
+
 h2 {
     text-align: center;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 1em;
 }
 
 main p, textarea {
@@ -266,6 +283,7 @@ h1 {
     display: grid;
     place-content: center;
     gap: 0.33em;
+    margin-top: 1em;
 }
 
 #misto-text p {
@@ -287,7 +305,6 @@ h1 {
     position: relative;
     top: 13px;
 }
-
 
 /***** Mapa *****/
 
@@ -403,10 +420,10 @@ h1 {
 
 /**************** Info ****************/
 
-#info-box {
+#info-box, #info-ban {
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
-    padding: 0 1em;
+    padding: 0 0.66em;
     margin-top: 1em;
 }
 
@@ -414,7 +431,7 @@ h1 {
     display: grid;
     gap: 0.66em;
     padding: 0.33em;
-    height: 10em; 
+    min-height: 13.3em; 
     align-content: start;
     /* background-color: var(--background-color); */
     border: 1px solid var(--text-color);
@@ -427,16 +444,17 @@ h1 {
     line-height: 1.33em;
     font-size: 0.88em;
     letter-spacing: 0;
+    padding-top: 0;
 }
 
 .one-info-head {
     display: flex;
     gap: 0.66em;
-    height: 3.3em;
+    height: 3em;
 }
 
 .one-info-head div {
-    width: 3.3em;
+    width: 3em;
 }
 
 .one-info-head img {
@@ -444,8 +462,27 @@ h1 {
 }
 
 .one-info-head p {
-    padding-top: 0.66em;
+    align-self: center;
 }
+
+/******* Info ban *******/
+
+#info-ban > .one-info-box {
+    min-height: 5.9em; 
+}
+
+#info-ban > .one-info-box > .one-info-text {
+    padding-top: 0.33em;
+}
+
+#info-ban-text {
+    text-align: center;
+    padding: 1em;
+}
+
+.one-info-empty {
+    display: none;
+}  
 
 /********************* formulář **************************/
 
@@ -636,7 +673,7 @@ footer {
         scroll-padding-top: 4.7em;
     }
 
-    .gallery .row {
+    .gallery .row .narrow {
         padding-left: 0em;
         padding-right: 0em;
     }
@@ -938,13 +975,21 @@ footer {
 
     /***** Info *****/
 
-    #info-box {
+    #info-box, #info-ban {
         grid-template-columns: repeat(4, 1fr);
     }
 
     .one-info-box {
-        height: 13.3em;
+        min-height: 16.6em;
     
+    }
+
+    .one-info-empty {
+        display: block;
+    }
+    
+    #info-ban > .one-info-box {
+        min-height: 8.86em; 
     }
 }
 
@@ -968,7 +1013,7 @@ footer {
         max-width: 1920px;
     }
 
-    #program-box, #formular-box {
+    .narrow, #program-box, #formular-box {
         max-width: 1022px;
     }
 

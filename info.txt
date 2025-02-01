@@ -1,0 +1,44 @@
+--------- Potřeba dodělat
+- Barvy a grafika + pozadí
+- barvy tlačítka + tlačítko do formuláře
+- Ikony do infa, logo malé i velké a designové listy + přebarvit
+- favikona
+- Sekce o nás - text + formát
+- text do title
+- Text na headeru
+- Text o nás
+- Text do info
+    - jídlo - něco jakou raut a večeře
+    - kontakt - email + telefon + lehčí text
+    - Co nedělat - napsat jinak
+    - Jinak se chovejte jak chcete - napsat jinak
+- Texty na formuláři
+- Text na footeru
+- Foto na úvod - 2x: 1x dál od sebe a 1x blízko u sebe (mobil)
+- Foto do galerie - vymyslet kolikrát ji budeme mít
+- Sekce QR kód fotky - vytvořit  a upravit rozměry kódu + přidat návod, popř. zakomentovat.
+
+--------- Nice to have
+
+- Galerie
+    - funkční galerie
+- Formulář
+    - Email NEBO telefon
+- Grafické prvky
+    - Hezčí navigace
+    - listy na pozadí
+
+--------- Možná později
+
+- paralax scrolling na headru
+- svědkové?
+- QR kód na peníze
+
+
+------------ poznámky
+
+- nemáme nikde Mikulcovi
+- nemáme nikde, že dort je od Su
+- nemáme nikde luxusní katering
+
+- odebral jsem info box "zvířata"
