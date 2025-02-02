@@ -1,20 +1,20 @@
 --------- Potřeba dodělat
 - logo malé i velké a designové listy + přebarvit
 - Sekce o nás - text + formát
-- text do title
 - Text na headeru
 - Text o nás
 - Text do info
     - kontakt - email + telefon + lehčí text
     - Co nedělat - napsat jinak
-    - Jinak se chovejte jak chcete - napsat jinak
 - Text na footeru
-- Foto na úvod - 2x: 1x dál od sebe a 1x blízko u sebe (mobil)
-- Foto do galerie - vymyslet kolikrát ji budeme mít
-- Sekce QR kód fotky - vytvořit  a upravit rozměry kódu + přidat návod, popř. zakomentovat.
 - svědkové: texty, telefon a fotky
+- Foto na úvod - 2x: 1x dál od sebe a 1x blízko u sebe (mobil)
+- Foto do galerie - vymyslet kolikrát ji budeme mít: změnit a zlepšit. Pro telefony je příliš malá.
+- Sekce QR kód fotky - vytvořit  a upravit rozměry kódu + přidat návod, popř. zakomentovat.
 - no follow, no index
-- rozchodit formulář
+- rozchodit formulář: zjistit jak se vrací na začátek nebo kamkoliv jinam
+- hover mi na mobilu zůstává
+- šipky u počtu dětí u formuláře
 --------- Nice to have
 
 - Galerie
