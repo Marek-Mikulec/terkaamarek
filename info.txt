@@ -1,6 +1,5 @@
 --------- Potřeba dodělat
 - logo malé i velké a designové listy + přebarvit
-- favikona
 - Sekce o nás - text + formát
 - text do title
 - Text na headeru
@@ -9,12 +8,11 @@
     - kontakt - email + telefon + lehčí text
     - Co nedělat - napsat jinak
     - Jinak se chovejte jak chcete - napsat jinak
-- Texty na formuláři
 - Text na footeru
 - Foto na úvod - 2x: 1x dál od sebe a 1x blízko u sebe (mobil)
 - Foto do galerie - vymyslet kolikrát ji budeme mít
 - Sekce QR kód fotky - vytvořit  a upravit rozměry kódu + přidat návod, popř. zakomentovat.
-- svědkové.
+- svědkové: texty, telefon a fotky
 - no follow, no index
 - rozchodit formulář
 --------- Nice to have
@@ -31,8 +29,6 @@
 ------------ poznámky
 
 - nemáme nikde Mikulcovi
-- nemáme nikde, že dort je od Su
-- nemáme nikde luxusní katering
 
 - odebral jsem info box "zvířata"
 - je povinný pouze e-mail - odstranil jsem JS pro "email NEBO telefon"

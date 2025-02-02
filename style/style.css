@@ -91,7 +91,7 @@ main p, textarea {
 .ico-box .ico {
     position: absolute;
     height: 3em;
-    left: 0.66em;
+    left: 1em;
     top: 0.33em;
 }
 
@@ -473,18 +473,18 @@ h1 {
     gap: 1em;
     padding: 0 0.66em;
     margin-top: 1em;
+    grid-auto-rows: 1fr;
 }
 
 .one-info-box {
     display: grid;
     gap: 0.66em;
     padding: 0.33em;
-    min-height: 13.3em; 
+    min-height: 15em; 
     align-content: start;
     /* background-color: var(--accent-color); */
     border: 2px solid var(--primary-color);
     border-radius: 0.66em;
-
 }
 
 .one-info-text {
@@ -516,14 +516,6 @@ h1 {
 }
 
 /******* Info ban *******/
-
-#info-ban > .one-info-box {
-    min-height: 5.9em; 
-}
-
-#info-ban > .one-info-box > .one-info-text {
-    padding-top: 0.33em;
-}
 
 #info-ban-text {
     text-align: center;
@@ -721,31 +713,70 @@ form hr {
     grid-template-columns: 1fr 1fr;
     gap: 1em;
     margin: 0 auto;
+    padding: 0 0.66em;
+    margin-top: 1em;
 }
 
 .one-person {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 2fr 1fr;
     border: 2px solid var(--primary-color);
     border-radius: 0.66em;
+    height: 25em;
+}
+
+.one-person-photo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    box-shadow: 0px 0px 10px var(--accent-color);
+    border-radius: 50%;
+    flex: 0 1 10em;
+    aspect-ratio: 1 / 1;
+
+}
+
+.one-person-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .one-person-photo img {
-    width: 100%;
+    max-width: 88%;
     border-radius: 50%;
+}
+
+.one-person-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.66em;
+    position: relative;
+    bottom: 0.5em;
+}
+
+.one-person-text > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1em;
+    text-align: center;
 }
 
 .one-person-name {
     color: var(--primary-color);
-    font-size: 1.33em;
+    font-size: 1.25em;
     letter-spacing: 0.15em;
     word-spacing: 0.3em;
-    line-height: 1em;
     font-weight: bold;
 }
 
 .one-person-perex {
     color: var(--primary-color);
     font-weight: bold;
-    font-size: 1.22em;
+    font-size: 1.125em;
     letter-spacing: 0.07em;
     word-spacing: 0.15em;
 
@@ -835,6 +866,20 @@ footer {
 
 }
 
+
+/*********************** querry určené pro infobox *****************/
+
+@media (min-width: 950px) {
+    #info-box, #info-ban {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .one-info-empty {
+        display: block;
+    }
+    
+}
+
 /********************** querry pro minimální šířku pro tablety */
 
 @media (max-width: 550px) {
@@ -890,24 +935,26 @@ footer {
         padding: 1em 1em 3em 1em;
     }
     
+    /****** formulář ********/
+
+    textarea {
+        height: 9em;
+    }
 
     /****** Info *******/
 
-    .one-info-head {
-        height: 2.2em;
-    }
-    
-    .one-info-head div {
-        width: 2.2em;
-    }
-    
-    .one-info-head p {
-        padding-top: 0.22em;
-        font-size: 0.81em;
+    #info-box, #info-ban {
+        grid-template-columns: repeat(1, 1fr);
     }
 
-    .one-info-text {
-        font-size: 0.75em;
+    .one-info-box {
+        min-height: 14em; 
+    }
+
+    /*********************** Svědci ****************/
+
+    #person-box {
+        grid-template-columns: 1fr;
     }
 
     /********************* QR kód foto *******/
@@ -916,6 +963,15 @@ footer {
         grid-template-columns: 1.66fr 1fr;
         gap: 0;
         margin-right: 1em;
+    }
+
+    .one-person {
+        height: 20em;
+    }
+
+    .one-person-photo-box {
+        flex: 0 1 8em;
+    
     }
 
     /*************** footer ************/
@@ -1023,8 +1079,13 @@ footer {
         padding-bottom: 0em;
     }
 
+    #program-layout {
+        max-width: 16.66em;
+    }
+
     .one-program-box {
         border: 2px solid var(--primary-color);
+        border-radius: 0.66em;
         margin-bottom: 0em;
         width: 8.7425em;
     }
@@ -1047,40 +1108,6 @@ footer {
         position: static;
         margin-left: auto;
     }
-    
-    /****** Info *******/
-
-    #info-box {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.66em;
-        padding: 0 0.33em;
-    }
-
-    .one-info-head {
-        height: 1.5em;
-    }
-    
-    .one-info-head div {
-        width: 1.5em;
-    }
-    
-    .one-info-head p {
-        padding-top: 0.11em;
-        font-size: 0.75em;
-        letter-spacing: 0.0075em;
-        word-spacing: 0.0075em;
-        line-height: 1.3em;
-    }
-
-    .one-info-text {
-        font-size: 0.75em;
-
-    }
-    
-    .one-info-box {
-        margin: 0 0;
-    
-    }
 
     /****** formulář ********/
 
@@ -1093,7 +1120,7 @@ footer {
     }
 
     textarea {
-        height: 9em;
+        height: 13.3em;
     }
 
     /********************* QR kód foto *******/
@@ -1137,25 +1164,6 @@ footer {
         position: relative;
         place-content: center start;
         right: -1.32em;
-    }
-
-    /***** Info *****/
-
-    #info-box, #info-ban {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .one-info-box {
-        min-height: 16.6em;
-    
-    }
-
-    .one-info-empty {
-        display: block;
-    }
-    
-    #info-ban > .one-info-box {
-        min-height: 8.86em; 
     }
 }
 
