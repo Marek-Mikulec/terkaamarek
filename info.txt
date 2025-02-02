@@ -6,7 +6,6 @@
 - Text na headeru
 - Text o nás
 - Text do info
-    - jídlo - něco jakou raut a večeře
     - kontakt - email + telefon + lehčí text
     - Co nedělat - napsat jinak
     - Jinak se chovejte jak chcete - napsat jinak

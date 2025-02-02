@@ -712,6 +712,45 @@ form hr {
     /* font-weight: bold; */
 }
 
+/***************** Svědci **********************/
+
+#person-box {
+    max-width: 710.6px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin: 0 auto;
+}
+
+.one-person {
+    border: 2px solid var(--primary-color);
+    border-radius: 0.66em;
+}
+
+.one-person-photo img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.one-person-name {
+    color: var(--primary-color);
+    font-size: 1.33em;
+    letter-spacing: 0.15em;
+    word-spacing: 0.3em;
+    line-height: 1em;
+    font-weight: bold;
+}
+
+.one-person-perex {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.22em;
+    letter-spacing: 0.07em;
+    word-spacing: 0.15em;
+
+}
+
 /********************* QR kód foto **************************/
 
 #qr-photo-box {
@@ -1144,7 +1183,7 @@ footer {
         max-width: 1920px;
     }
 
-    .narrow, #program-box, #formular-box {
+    .narrow, #program-box, #formular-box, #person-box, #qr-photo-layout {
         max-width: 1022px;
     }
 
