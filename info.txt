@@ -1,8 +1,5 @@
 --------- Potřeba dodělat
-- formulář
-    - Blbne :focus u inputů email, tel, text, atd. - špatný rámeček
-    - Hvězdičky jako povinné informace
-- Ikony do infa, logo malé i velké a designové listy + přebarvit
+- logo malé i velké a designové listy + přebarvit
 - favikona
 - Sekce o nás - text + formát
 - text do title
@@ -18,7 +15,9 @@
 - Foto na úvod - 2x: 1x dál od sebe a 1x blízko u sebe (mobil)
 - Foto do galerie - vymyslet kolikrát ji budeme mít
 - Sekce QR kód fotky - vytvořit  a upravit rozměry kódu + přidat návod, popř. zakomentovat.
-
+- svědkové.
+- no follow, no index
+- rozchodit formulář
 --------- Nice to have
 
 - Galerie
@@ -29,9 +28,6 @@
 --------- Možná později
 
 - paralax scrolling na headru
-- svědkové?
-- QR kód na peníze
-
 
 ------------ poznámky
 
@@ -41,3 +37,4 @@
 
 - odebral jsem info box "zvířata"
 - je povinný pouze e-mail - odstranil jsem JS pro "email NEBO telefon"
+- qr kód na peníze dělat nebudeme

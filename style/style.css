@@ -60,7 +60,7 @@ body {
 }
 
 .narrow p {
-    padding: 1em;
+    padding: 1.33em;
 }
 
 h2 {
@@ -78,6 +78,26 @@ main p, textarea {
     word-spacing: 0.015em;
     line-height: 1.3em;
     }
+
+/******************** ikony u sekcí ******************/
+
+.ico-box {
+    position: relative;
+    max-width: 1066px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ico-box .ico {
+    position: absolute;
+    height: 3em;
+    left: 0.66em;
+    top: 0.33em;
+}
+
+.ico img {
+    height: 100%;
+}
 
 /******************* Galerie ****************/
 
@@ -529,12 +549,14 @@ h1 {
 }
 
 form label {
+    /* flex: 1; */
     line-height: 1;
     display: flex;
     align-items: center;
     gap: 0.5em;
     margin: 0;
     padding: 0;
+    /* width: 100%; */
 }
 
 input {
@@ -545,6 +567,15 @@ input {
     border-radius: 0.5em;
     background: var(--accent-color);
     transition: 0.5s;
+}
+
+input[type=text], input[type=email] , input[type=tel] , input[type=number] {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input[type=radio], input[type=checkbox] {
+    margin-right: 0.33em;
 }
 
 #form-partic, #form-kids-num {
@@ -563,6 +594,23 @@ input {
     transition: 0.5s;
 }
 
+#form-kids-num {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+textarea {
+    padding: 0.5em 1em;
+    max-width: 100%;
+    height: 6em;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.33em;
+    resize: vertical;
+    background: var(--accent-color);
+    transition: 0.5s;
+}
+
+/** formulář hover **/
+
 #form-partic label:hover, #form-kids-num label:hover, textarea:hover, input[type=text]:hover, input[type=email]:hover, input[type=tel]:hover, input[type=number]:hover {
     transition: 0.5s;
     color: var(--accent-color);
@@ -577,10 +625,14 @@ input:hover::placeholder, textarea:hover::placeholder {
 
 }
 
+/** formulář focus **/
+
 input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="number"]:focus, textarea:focus {
     background: var(--secondary-color);
     color: var(--text-color);
+    outline: 1px solid var(--primary-color);
     border: 1px solid var(--primary-color);
+    box-shadow: 0px 0px 5px var(--primary-color);
     transition: 0.5s;
 }
 
@@ -589,24 +641,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 }
 
-#form-kids-num {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-input[type=radio], input[type=checkbox] {
-    margin-right: 0.33em;
-}
-
-textarea {
-    padding: 0.5em 1em;
-    max-width: 100%;
-    height: 6em;
-    border: 2px solid var(--primary-color);
-    border-radius: 0.33em;
-    resize: vertical;
-    background: var(--accent-color);
-    transition: 0.5s;
-}
+/** formulář button **/
 
 #form-submit {
     display: grid;
@@ -640,6 +675,8 @@ textarea {
     border: 2px solid var(--primary-color);
 }
 
+/** formulář čára mezi **/
+
 form hr {
     width: calc(100% + 2em);
     height: 1px;
@@ -647,6 +684,32 @@ form hr {
     border: 0;
     transform: translate(-1em, 0);
     margin: 0.33em 0;
+}
+
+/** formulář hvězda **/
+
+.form-star-box {
+    position: relative;
+}
+
+.form-star {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    bottom: 0.5em;
+    right: -1.05em;
+    color: #c71a10;
+    z-index: 50;
+    /* font-weight: bold; */
+}
+
+
+.form-star-text {
+    display: inline;
+    color: #c71a10;
+    line-height: 1;
+    font-size: 0.8em;
+    vertical-align: top;
+    /* font-weight: bold; */
 }
 
 /********************* QR kód foto **************************/
@@ -828,6 +891,12 @@ footer {
 /***************************** querry pro minimální šířku pro mobily */
 
 @media (max-width: 380px) {
+    
+    /* zmizení ikony u sekce */
+
+    .ico {
+        display: none;
+    }
 
     /* Navigace Zmizení loga */
     #nav-logo {
