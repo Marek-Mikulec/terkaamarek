@@ -183,7 +183,7 @@ nav img {
 
 /**** Nav buttons *****/
 
-nav ul {
+#navbar ul {
     display: flex;
     justify-content: right;
     align-content: end;
@@ -191,7 +191,7 @@ nav ul {
     padding-right: 1em;
 }
 
-nav ul li {
+#navbar ul li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -213,7 +213,7 @@ nav ul li a:visited {
     min-width: 6em;
     width: 100%;    
     max-height: min(3em, 10vh);
-    line-height: 3em;
+    line-height: min(3em, 10vh);
     font-size: 0.88em;
     transition: 0.5s;
 }
@@ -248,6 +248,93 @@ nav ul li a:active {
 
 .nav-shape .shape-fill {
     fill: var(--secondary-color);
+}
+
+/***** Nav up button ****/
+
+#nav-up {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 1.5em;
+    transform: translate(0, 50%);
+}
+
+#nav-up-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    border: 0.2em solid var(--primary-color);
+    border-radius: 0.66em;
+    width: 3em;
+    height: 7.5em;
+}
+
+#nav-up-box img {
+    margin-bottom: auto;
+}
+
+/***** Nav Zmizení formuláře ****/
+
+#navbar ul li:last-child {
+    display: none;
+}
+
+/***** Nav Napište nám button ****/
+
+#nav-form {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform: scale(1, 0.66) translate(50%, 66%);
+}
+
+#nav-form-href {
+    display: block;
+    text-decoration: none;
+}
+
+#nav-form-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(22.5em, 100vh);
+    background-color: var(--secondary-color);
+    border: 0.25em solid var(--primary-color);
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+}
+
+#nav-form-box-button {
+    transform: scale(1.22, 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 2em;
+    right: 5.5em;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 3em;
+    box-shadow: 0px 0px 6px var(--primary-color);
+    width: 7.92em;
+    font-size: 0.88em;
+    height: min(2.64em, 10vh);
+    transition: 0.5s;
+}
+
+#nav-form-box-button:hover {
+    transition: 0.5s;
+    color: var(--primary-color);
+    background-color: #fff;
+    box-shadow: 0px 0px 8px #fff;
+    border: 2px solid var(--primary-color);
+}
+
+#nav-form-box-button p {
+    line-height: min(2.64em, 10vh);
 }
 
 /*************************** header */
@@ -650,7 +737,7 @@ input:focus::placeholder, textarea:focus::placeholder {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border: 2px solid var(--secondary-color);
-    border-radius: 1em;
+    border-radius: 2em;
     box-shadow: 0px 0px 6px var(--primary-color);
     padding: 0;
     width: 7em;
@@ -894,9 +981,14 @@ footer {
         padding-right: 0em;
     }
 
-    /* Navigace Zmizení úvodu */
-    nav ul li:first-child {
+    /* Navigace Zmizení úvodu a zobrazení šipky nahoru */
+
+    #navbar ul li:first-child {
         display: none;
+    }
+
+    #nav-up {
+        display: block;
     }
 
     /**** navigace zakotvení loga ***/
@@ -1004,14 +1096,14 @@ footer {
         height: 3.75em;
     }
 
-    nav ul {
+    #navbar ul {
         justify-content: center;
         align-content: end;
         gap: 0.75em;
         padding-left: 0.75em;
     }
     
-    nav ul li {
+    #navbar ul li {
         width: 100%
     }
 
@@ -1151,11 +1243,22 @@ footer {
 
 @media (min-width: 769px) {
 
-    /* Obrázek na pozadí */
+    /* Obrázek na pozadí headeru */
     header {
         background: url("../images/uvod-1920-vzor.jpg");
         background-position: center;
         background-size: cover;
+    }
+
+    /***** Nav zobrazení tlačítka formuláře ****/
+
+    #navbar ul li:last-child {
+        display: flex;
+    }
+
+    /***** Nav Zmizení tlačíta napište nám ****/
+    #nav-form {
+        display: none;
     }
 
     /***** Místo konání text *****/
