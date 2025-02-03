@@ -256,7 +256,7 @@ nav ul li a:active {
     display: none;
     position: fixed;
     bottom: 0;
-    left: 1.5em;
+    left: 1em;
     transform: translate(0, 50%);
 }
 
@@ -267,8 +267,8 @@ nav ul li a:active {
     background-color: var(--secondary-color);
     border: 0.2em solid var(--primary-color);
     border-radius: 0.66em;
-    width: 3em;
-    height: 7.5em;
+    width: 2em;
+    height: 6em;
 }
 
 #nav-up-box img {
@@ -287,7 +287,8 @@ nav ul li a:active {
     position: fixed;
     bottom: 0;
     right: 0;
-    transform: scale(1, 0.66) translate(50%, 66%);
+    transform: translate(calc(50% + 2em), 77.5%);
+    /* transform: scale(1, 0.33) translate(44%, 122%); */
 }
 
 #nav-form-href {
@@ -299,21 +300,20 @@ nav ul li a:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: min(22.5em, 100vh);
+    height: 23.75em;
     background-color: var(--secondary-color);
     border: 0.25em solid var(--primary-color);
-    border-radius: 50%;
+    border-radius: 3em;
     aspect-ratio: 1 / 1;
 }
 
 #nav-form-box-button {
-    transform: scale(1.22, 2);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    bottom: 2em;
-    right: 5.5em;
+    position: absolute;
+    left: 2em;
+    top: 2em;
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border: 2px solid var(--secondary-color);
