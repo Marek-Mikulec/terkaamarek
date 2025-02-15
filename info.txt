@@ -1,13 +1,16 @@
 --------- Potřeba dodělat
+
+- Svatební program
+    - Přidat na 12:00 příjezd hostů
+    - Na konec přidat poznámku že časy jsou pouze orientační 
 - logo malé i velké a designové listy + přebarvit
-- Sekce o nás - text + formát
-- Text na headeru
-- Text o nás
+- Sekce o nás formát
 - Text do info
-    - kontakt - email + telefon + lehčí text
+    - kontakt 
+        -  · Terka: 602699058, terkach23@gmail.com
+        · Mára: 
     - Co nedělat - napsat jinak
-- Text na footeru
-- svědkové: texty, telefon a fotky
+- svědkové: texty, telefon, fotky a formát
 - Foto na úvod - 2x: 1x dál od sebe a 1x blízko u sebe (mobil)
 - Foto do galerie - vymyslet kolikrát ji budeme mít: změnit a zlepšit. Pro telefony je příliš malá.
 - Sekce QR kód fotky - vytvořit  a upravit rozměry kódu + přidat návod, popř. zakomentovat.
@@ -15,6 +18,8 @@
 - rozchodit formulář: zjistit jak se vrací na začátek nebo kamkoliv jinam
 - hover mi na mobilu zůstává
 - šipky u počtu dětí u formuláře
+- zkusit dát do mapy  parkoviště
+
 --------- Nice to have
 
 - Galerie
@@ -28,7 +33,7 @@
 
 ------------ poznámky
 
-- nemáme nikde Mikulcovi
+- udělat ten obdélník na headru 50% průhlednej?
 
 - odebral jsem info box "zvířata"
 - je povinný pouze e-mail - odstranil jsem JS pro "email NEBO telefon"
