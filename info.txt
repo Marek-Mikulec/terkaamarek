@@ -4,11 +4,9 @@
 - svědkové: telefon, fotky
 - Foto na úvod - 2x: 1x dál od sebe a 1x blízko u sebe (mobil) + upravit box na headru u poměrů, kdy mizí slogan
 - Foto do galerie - vymyslet kolikrát ji budeme mít: změnit a zlepšit. Pro telefony je příliš malá.
-- Sekce QR kód fotky - vytvořit  a upravit rozměry kódu + přidat návod, popř. zakomentovat.
+- Sekce QR kód fotky - vytvořit  a upravit rozměry kódu, popř. zakomentovat.
 - rozchodit formulář: zjistit jak se vrací na začátek nebo kamkoliv jinam
 - hover mi na mobilu zůstává
-- šipky u počtu dětí u formuláře
-- zkusit dát do mapy parkoviště
 
 --------- Nice to have
 
@@ -20,6 +18,7 @@
 --------- Možná později
 
 - paralax scrolling na headru
+- možná se podivat na pin mapy přes google api a javascript
 
 ------------ poznámky
 

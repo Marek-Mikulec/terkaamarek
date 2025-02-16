@@ -361,8 +361,13 @@
                     <hr>
 
                     <p>Kolik s Vámi přijde dětí?</p>
+
+                    <div id="form-kids-label">
+                        <button id="a" type="button" onclick="this.nextElementSibling.stepDown()">-</button>
+                        <input type="number" min="0" name="kids" placeholder="0">
+                        <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                    </div>
     
-                    <input type="number" name="kids" placeholder="0">
 
                     <p>Kolik dětem je?</p>
     
