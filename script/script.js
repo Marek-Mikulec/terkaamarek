@@ -2,10 +2,23 @@
 
 /** Scrolování úvodní obrazovky **/
 
-window.addEventListener('scroll', function() {
+window.addEventListener("scroll", function() {
     let scrolled = window.scrollY;
     let offset = scrolled * 0.8;
-    document.querySelector('header').style.backgroundPosition = `center calc(50% + ${offset}px)`;
+    document.querySelector("header").style.backgroundPosition = `center calc(50% + ${offset}px)`;
+});
+
+/** Scrolování listů **/
+
+window.addEventListener("scroll", function() {
+    let scrollY = window.scrollY;
+
+    document.querySelectorAll(".left").forEach(img => {
+        img.style.transform = `translateY(${-scrollY * 0.3}px)`
+    });
+    document.querySelectorAll(".right").forEach(img => {
+        img.style.transform = `translateY(${-scrollY * 0.3}px)`
+    });
 });
 
 /**************** tlačítka, odstranit hover */
