@@ -8,6 +8,14 @@ window.addEventListener('scroll', function() {
     document.querySelector('header').style.backgroundPosition = `center calc(50% + ${offset}px)`;
 });
 
+/**************** tlačítka, odstranit hover */
+
+document.querySelectorAll('nav ul li a').forEach(button => {
+    button.addEventListener('touchend', () => {
+        button.blur();
+    });
+});
+
 /**************** Formulář ****************/
 
 /** Formulář input phone a mezery mezi čísla  **/
