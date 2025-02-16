@@ -1,8 +1,5 @@
 --------- Potřeba dodělat
 
-- Svatební program
-    - Přidat na 12:00 příjezd hostů
-    - Na konec přidat poznámku že časy jsou pouze orientační 
 - logo malé i velké a designové listy + přebarvit
 - Sekce o nás formát
 - Text do info
@@ -10,11 +7,10 @@
         -  · Terka: 602699058, terkach23@gmail.com
         · Mára: 
     - Co nedělat - napsat jinak
-- svědkové: texty, telefon, fotky a formát
+- svědkové: telefon, fotky
 - Foto na úvod - 2x: 1x dál od sebe a 1x blízko u sebe (mobil)
 - Foto do galerie - vymyslet kolikrát ji budeme mít: změnit a zlepšit. Pro telefony je příliš malá.
 - Sekce QR kód fotky - vytvořit  a upravit rozměry kódu + přidat návod, popř. zakomentovat.
-- no follow, no index
 - rozchodit formulář: zjistit jak se vrací na začátek nebo kamkoliv jinam
 - hover mi na mobilu zůstává
 - šipky u počtu dětí u formuláře
