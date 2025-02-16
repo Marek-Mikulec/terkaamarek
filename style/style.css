@@ -418,16 +418,16 @@ h1 {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 3em;
+    width: 2.6em;
     height: auto;
-    transform: translate(calc(-100% - 0.25em),-25%);
+    transform: translate(calc(-100% - 0.25em), -15%);
 }
 
 #spade-right {
     position: absolute;
     top: 0;
     right: 0;
-    width: 3em;
+    width: 2.6em;
     height: auto;
     transform: translate(calc(100% + 0.25em), 25%);
 }
@@ -1002,6 +1002,7 @@ footer {
 }
 
 #footer-layout p {
+    color: var(--primary-color);
     font-size: 2em;
     letter-spacing: 0.02em;
     word-spacing: 0.03em;

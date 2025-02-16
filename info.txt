@@ -1,20 +1,14 @@
 --------- Potřeba dodělat
 
-- logo malé i velké a designové listy + přebarvit
 - Sekce o nás formát
-- Text do info
-    - kontakt 
-        -  · Terka: 602699058, terkach23@gmail.com
-        · Mára: 
-    - Co nedělat - napsat jinak
 - svědkové: telefon, fotky
-- Foto na úvod - 2x: 1x dál od sebe a 1x blízko u sebe (mobil)
+- Foto na úvod - 2x: 1x dál od sebe a 1x blízko u sebe (mobil) + upravit box na headru u poměrů, kdy mizí slogan
 - Foto do galerie - vymyslet kolikrát ji budeme mít: změnit a zlepšit. Pro telefony je příliš malá.
 - Sekce QR kód fotky - vytvořit  a upravit rozměry kódu + přidat návod, popř. zakomentovat.
 - rozchodit formulář: zjistit jak se vrací na začátek nebo kamkoliv jinam
 - hover mi na mobilu zůstává
 - šipky u počtu dětí u formuláře
-- zkusit dát do mapy  parkoviště
+- zkusit dát do mapy parkoviště
 
 --------- Nice to have
 
