@@ -16,10 +16,20 @@ window.addEventListener("scroll", function() {
     document.querySelector("header").style.backgroundPosition = `center calc(50% + ${offset}px)`;
 });
 
+/** Scrolování header boxu **/
+
+window.addEventListener("scroll", function() {
+    let scrolled = window.scrollY; 
+    let aspectRatio = window.innerWidth / window.innerHeight;
+    let offset = aspectRatio < 1 ? scrolled * 0.2 : scrolled * 0.12;
+
+    document.querySelector("#header-box").style.transform = `translate(-50%, calc(-50% + ${offset}px))`;
+});
+
 /** Scrolování listů **/
 
 window.addEventListener("scroll", function() {
-    let scrollY = window.scrollY; // Aktuální pozice scrollu
+    let scrollY = window.scrollY;
 
     document.querySelector(".left").style.transform = `translateY(${-scrollY * 0.2}px)`;
     document.querySelector(".right").style.transform = `translateY(${-scrollY * 0.3}px)`;
