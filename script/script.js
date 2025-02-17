@@ -4,7 +4,15 @@
 
 window.addEventListener("scroll", function() {
     let scrolled = window.scrollY;
-    let offset = scrolled * 0.8;
+    let aspectRatio = window.innerWidth / window.innerHeight;
+    let offset;
+    
+    if (aspectRatio < 1) {
+        offset = scrolled * 0.1;
+    } else {
+        offset = scrolled * 1.05;
+    }
+
     document.querySelector("header").style.backgroundPosition = `center calc(50% + ${offset}px)`;
 });
 

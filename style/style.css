@@ -399,19 +399,6 @@ h1 {
     letter-spacing: 0.03em;
 }
 
-/** header box - odstranění sloganu **/
-
-@media (min-aspect-ratio: 16/9) and (max-width: 769px){
-
-    #slogan {
-        display: none;
-    }
-
-    #header-box {
-        width: calc(100% - 20em);
-    }
-}
-
 /** header listy */
 
 #spade-left {
@@ -430,6 +417,40 @@ h1 {
     width: 2.6em;
     height: auto;
     transform: translate(calc(100% + 0.25em), 25%);
+}
+
+/** header box - odstranění sloganu a úprava formátu **/
+
+@media (min-aspect-ratio: 2/1), (min-aspect-ratio: 2/3) and (max-width: 380px), (min-aspect-ratio: 8/7) and (max-width: 769px){
+
+    #header-box {
+        width: calc(100% - 17em);
+        top: 83.3%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        letter-spacing: 0.015em;
+    }
+
+    #date {
+        font-size: 1em;
+        letter-spacing: 0.02em;
+    }
+    
+    #slogan {
+        display: none;
+    }
+
+    #spade-left {
+        width: 1.8em;
+        transform: translate(calc(-100% - 0.25em), -3%);
+    }
+    
+    #spade-right {
+        width: 1.8em;
+        transform: translate(calc(100% + 0.25em), 8%);
+    }
 }
 
 /******************** Listy na pozadí ******/
@@ -464,7 +485,7 @@ h1 {
 }
 
 @media (max-width: 1250px) {
-    .bg-box-layout{
+    .bg-box {
         display: none;
     }
 }
@@ -1021,13 +1042,13 @@ form hr {
     font-size: 1.125em;
     letter-spacing: 0.07em;
     word-spacing: 0.15em;
-
 }
 
 .one-person-perex {
     line-height: 1.33em;
     font-size: 0.88em;
     letter-spacing: 0;
+    padding-top: 0.66em;
     padding-bottom: 1em;
 }
 
@@ -1036,7 +1057,7 @@ form hr {
 #qr-photo-box {
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 10em;
     gap: 1em;
 }
 
@@ -1258,14 +1279,6 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    /********************* QR kód foto *******/
-
-    #qr-photo-box {
-        grid-template-columns: 1.66fr 1fr;
-        gap: 0;
-        margin-right: 1em;
-    }
-
     .one-person {
         height: 25em;
     }
@@ -1275,11 +1288,31 @@ footer {
     
     }
 
+    /********************* QR kód foto *******/
+
+    #qr-photo-box {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    #qr-photo-box-img {
+        margin: 0 auto;
+        display: grid;
+        place-content: center;
+    }
+
+    #qr-photo-box-img img {
+        width: calc(66% - 6em);
+        min-width: 10em;
+        margin: 0 auto;
+    }
+
     /*************** footer ************/
 
     #footer-box {
         margin-left: 1.66em;
-        margin-right: 1.66e,;
+        margin-right: 1.66em;
     }
 
 }
@@ -1331,6 +1364,11 @@ footer {
     }
 
     /* text na headru */
+
+    #header-box {
+        width: calc(100% - 8em);
+    }
+
     h1 {
         font-size: 1.33em;
     }
@@ -1342,7 +1380,16 @@ footer {
     #slogan {
         font-size: 0.75em;
     }
+
+    /*** Listy na headru ****/ 
     
+    #spade-left {
+        width: 2em;
+    }
+    
+    #spade-right {
+        width: 2em;
+    }
    
     /***** místo konání img *****/
 
@@ -1438,28 +1485,6 @@ footer {
 
     textarea {
         height: 13.3em;
-    }
-
-    /********************* QR kód foto *******/
-
-    #qr-photo-box {
-        grid-auto-flow: row;
-        grid-template-columns: 1fr;
-        gap: 0;
-        
-    }
-   
-    #qr-photo-box-img {
-        margin: 0 auto;
-        display: grid;
-        place-content: center;
-        margin-right: 0em;
-    }
-
-    #qr-photo-box-img img {
-        width: calc(66% - 4em);
-        min-width: 200px;
-        margin: 0 auto;
     }
 }
 
