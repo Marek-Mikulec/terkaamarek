@@ -197,10 +197,6 @@ nav img {
     flex: 0 1 6em;
 }
 
-nav ul li a {
-    touch-action: manipulation;
-}
-
 nav ul li a:link,
 nav ul li a:visited {
     display: flex;
@@ -438,7 +434,7 @@ h1 {
 
 /******************** Listy na pozadí ******/
 
-.bg-box {
+.bg-box, .bg-box-fix {
     position: relative;
 }
 
@@ -451,7 +447,7 @@ h1 {
 .bg-image {
     position: absolute;
     width: 20vw;
-    max-width: 200px;
+    max-width: 12.5em;
     opacity: 0.8;
     transition: transform 0.1s ease-out;
     z-index: -5;
@@ -465,6 +461,20 @@ h1 {
 .right, .right-fix {
     right: 0;
     bottom: 5%;
+}
+
+@media (max-width: 1250px) {
+    .bg-box-layout{
+        display: none;
+    }
+}
+
+/**** Listy na footeru */ 
+
+.bg-box-layout-fix {
+    position: absolute;
+    width: 100%;
+    height: 80vh;
 }
 
 /******************** Místo konání ******/
@@ -783,7 +793,7 @@ textarea {
     background: var(--accent-color);
     transition: 0.5s;
 }
-/** formulář label děti - odstranění šipek **/
+/** formulář label děti - odstranění šipek v prohlížečích **/
 
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
@@ -792,7 +802,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 input[type=number] {
-    -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 /** formulář label děti šipky **/
@@ -1112,9 +1122,9 @@ footer {
 
 /***** footer - zmizení loga k poměrům ******/
 
-@media (min-aspect-ratio: 22.5/9) {
+@media (min-aspect-ratio: 2/1) {
 
-    #footer-logo {
+    #footer-logo, .bg-box-fix {
         display: none;
     }
 
@@ -1129,7 +1139,7 @@ footer {
 
 @media (min-aspect-ratio: 2/3) and (max-width: 380px) {
 
-    #footer-logo {
+    #footer-logo, .bg-box-fix {
         display: none;
     }
 
@@ -1139,12 +1149,13 @@ footer {
 
     #footer-layout p {
         align-content: center;
+        padding: 0;
     }
 }
 
 @media (min-aspect-ratio: 8/7) and (max-width: 769px) {
 
-    #footer-logo {
+    #footer-logo, .bg-box-fix {
         display: none;
     }
 
@@ -1154,6 +1165,7 @@ footer {
 
     #footer-layout p {
         align-content: center;
+        padding: 0;
     }
 }
 

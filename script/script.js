@@ -11,14 +11,10 @@ window.addEventListener("scroll", function() {
 /** Scrolování listů **/
 
 window.addEventListener("scroll", function() {
-    let scrollY = window.scrollY;
+    let scrollY = window.scrollY; // Aktuální pozice scrollu
 
-    document.querySelectorAll(".left").forEach(img => {
-        img.style.transform = `translateY(${-scrollY * 0.3}px)`
-    });
-    document.querySelectorAll(".right").forEach(img => {
-        img.style.transform = `translateY(${-scrollY * 0.3}px)`
-    });
+    document.querySelector(".left").style.transform = `translateY(${-scrollY * 0.2}px)`;
+    document.querySelector(".right").style.transform = `translateY(${-scrollY * 0.3}px)`;
 });
 
 /**************** tlačítka, odstranit hover */
