@@ -346,8 +346,9 @@ header {
     background: url("../images/uvod-900-test.jpg");
     background-position: center;
     background-size: cover;
-    height: 100dvh;
-    background-attachment: fixed;
+    min-height: 100vh;
+    height: auto;
+    background-attachment: scroll;
 }
 
 @media (min-aspect-ratio: 1/1) {
@@ -355,8 +356,9 @@ header {
         background: url("../images/uvod-1920-test.jpg");
         background-position: center;
         background-size: cover;
-        height: 100dvh;
-        background-attachment: fixed;
+        min-height: 100vh;
+        height: auto;
+        background-attachment: scroll;
     }
 }
 
@@ -1283,10 +1285,8 @@ footer {
         gap: 1em;
     }
 
-    #qr-photo-box-img {
-        margin: 0 auto;
+    #qr-photo-box-img a {
         display: grid;
-        place-content: center;
     }
 
     #qr-photo-box-img img {

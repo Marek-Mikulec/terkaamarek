@@ -8,9 +8,9 @@ window.addEventListener("scroll", function() {
     let offset;
     
     if (aspectRatio < 1) {
-        offset = scrolled * 0.1;
+        offset = scrolled * 1.1;
     } else {
-        offset = scrolled * 1.05;
+        offset = scrolled * 1.2;
     }
 
     document.querySelector("header").style.backgroundPosition = `center calc(50% + ${offset}px)`;
@@ -21,7 +21,7 @@ window.addEventListener("scroll", function() {
 window.addEventListener("scroll", function() {
     let scrolled = window.scrollY; 
     let aspectRatio = window.innerWidth / window.innerHeight;
-    let offset = aspectRatio < 1 ? scrolled * 0.2 : scrolled * 0.12;
+    let offset = aspectRatio < 1 ? scrolled * 0.2 : scrolled * 0.13;
 
     document.querySelector("#header-box").style.transform = `translate(-50%, calc(-50% + ${offset}px))`;
 });
@@ -33,23 +33,6 @@ window.addEventListener("scroll", function() {
 
     document.querySelector(".left").style.transform = `translateY(${-scrollY * 0.2}px)`;
     document.querySelector(".right").style.transform = `translateY(${-scrollY * 0.3}px)`;
-});
-
-/*** Stejná výška headeru na mobilu  **/
-
-function setHeaderHeight() {
-    document.querySelector("header").style.height = `${window.innerHeight}px`;
-}
-
-window.addEventListener("resize", setHeaderHeight);
-setHeaderHeight(); // Nastaví výšku při načtení
-
-/**************** tlačítka, odstranit hover */
-
-document.querySelectorAll('nav ul li a').forEach(button => {
-    button.addEventListener('touchend', () => {
-        button.blur();
-    });
 });
 
 /**************** Formulář ****************/
