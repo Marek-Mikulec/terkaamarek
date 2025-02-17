@@ -35,6 +35,15 @@ window.addEventListener("scroll", function() {
     document.querySelector(".right").style.transform = `translateY(${-scrollY * 0.3}px)`;
 });
 
+/*** Stejná výška headeru na mobilu  **/
+
+function setHeaderHeight() {
+    document.querySelector("header").style.height = `${window.innerHeight}px`;
+}
+
+window.addEventListener("resize", setHeaderHeight);
+setHeaderHeight(); // Nastaví výšku při načtení
+
 /**************** tlačítka, odstranit hover */
 
 document.querySelectorAll('nav ul li a').forEach(button => {

@@ -76,7 +76,7 @@ main p, textarea {
     letter-spacing: 0.01em;
     word-spacing: 0.015em;
     line-height: 1.3em;
-    }
+}
 
 /******************** ikony u sekcí ******************/
 
@@ -355,6 +355,8 @@ header {
         background: url("../images/uvod-1920-test.jpg");
         background-position: center;
         background-size: cover;
+        height: 100dvh;
+        background-attachment: fixed;
     }
 }
 

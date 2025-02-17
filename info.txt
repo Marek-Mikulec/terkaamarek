@@ -7,7 +7,8 @@
     - Sekce o nás formát - možná upravit s galerií
 - Sekce QR kód fotky - jiný QR kód + otestovat .
 - rozchodit formulář: zjistit jak se vrací na začátek nebo kamkoliv jinam
-- zkontrolovat dynamickou výšku headeru
+- zkontrolovat dynamickou výšku headeru - nefunguje
+- qr kód jako odkaz
 
 --------- Nice to have
 
