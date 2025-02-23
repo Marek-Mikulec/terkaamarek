@@ -343,7 +343,7 @@ nav ul li a:active {
 /*** header obr ****/ 
 
 header {
-    background: url("../images/uvod-900-test.jpg");
+    background: url("../images/uvod-900-test-1.jpg");
     background-position: center;
     background-size: cover;
     min-height: 100vh;
@@ -353,7 +353,7 @@ header {
 
 @media (min-aspect-ratio: 1/1) {
     header {
-        background: url("../images/uvod-1920-test.jpg");
+        background: url("../images/uvod-1920-test-1.jpg");
         background-position: center;
         background-size: cover;
         min-height: 100vh;
