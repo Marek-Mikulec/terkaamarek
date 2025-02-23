@@ -1,19 +1,13 @@
 --------- Potřeba dodělat
 
-
-- svědkové: telefon, fotky
-- Foto na úvod - 2x: 1x dál od sebe a 1x blízko u sebe (mobil) + upravit box na headru u poměrů, kdy mizí slogan
-- Foto do galerie - vymyslet kolikrát ji budeme mít: změnit a zlepšit. Pro telefony je příliš malá.
-    - Sekce o nás formát - možná upravit s galerií
-- Sekce QR kód fotky - jiný QR kód + otestovat .
+- svědkové: telefon?, fotky
 - rozchodit formulář: zjistit jak se vrací na začátek nebo kamkoliv jinam
-- zkontrolovat dynamickou výšku headeru - nefunguje
-- qr kód jako odkaz
 
 --------- Nice to have
 
 - Galerie
     - funkční galerie
+    - Sekce o nás formát - možná upravit s galerií
 - Grafické prvky
     - listy na pozadí - možná je opakovat
 
@@ -25,6 +19,7 @@
 ------------ poznámky
 
 - udělat ten obdélník na headru 50% průhlednej?
+- Foto na úvod možná udělat barevný radient?
 
 - hover mi na mobilu zůstává - nechávám, při kliku na displey se vypne
 - odebral jsem info box "zvířata"

@@ -8,7 +8,7 @@
 
 :root {
 --primary-color: hsl(71, 11%, 45%);
---secondary-color: hsl(58, 42%, 87%);
+--secondary-color: hsl(58, 34%, 90%);
 --accent-color: hsl(30, 45%, 95%);
 --text-color: hsl(69, 9%, 33%);
 --background-color: hsl(22, 39%, 90%); 
@@ -343,7 +343,7 @@ nav ul li a:active {
 /*** header obr ****/ 
 
 header {
-    background: url("../images/uvod-900-test-1.jpg");
+    background: url("../images/uvod-1440.jpg");
     background-position: center;
     background-size: cover;
     min-height: 100vh;
@@ -353,7 +353,7 @@ header {
 
 @media (min-aspect-ratio: 1/1) {
     header {
-        background: url("../images/uvod-1920-test-1.jpg");
+        background: url("../images/uvod-2560.jpg");
         background-position: center;
         background-size: cover;
         min-height: 100vh;
