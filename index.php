@@ -286,7 +286,7 @@
                         </div>
                         <p><strong>Jídlo</strong></p>
                     </div>
-                    <p class="one-info-text">Po obřadu na&nbsp;Vás bude čekat grilování a&nbsp;další studené i&nbsp;teplé občerstvení. Odpoledne se těšte na&nbsp;bohatý raut.<br><br>O&nbsp;dort a&nbsp;sladké dobroty se&nbsp;postará naše drahá&nbsp;Su. Věčně hladovým doporučujeme lehký oběd před&nbsp;příjezdem.</p>
+                    <p class="one-info-text">Po obřadu na&nbsp;Vás bude čekat bohatý raut. Odpoledne se těšte na&nbsp;grilování a&nbsp;další studené i&nbsp;teplé občerstvení.<br><br>O&nbsp;dort a&nbsp;sladké dobroty se&nbsp;postará naše drahá&nbsp;Su. Věčně hladovým doporučujeme lehký oběd před&nbsp;příjezdem.</p>
                 </div>
                 <div class="one-info-box">
                     <div class="one-info-head">
@@ -347,13 +347,24 @@
         <section class="gallery" id="formular">
             <div class="row" id="formular-box">
                 <h2>Potvrzení účasti</h2>
-                <form action="/others/mailer.php" method="post" id="formular-layout">
+                <form action="others/mailer.php" method="post" id="formular-layout">
+                    
+                    <?php
+                        if($_GET['success'] == 1){
+                        echo "<div class=\"form-result success\">Zprávu jsme obdrželi. Děkujeme&nbsp;Vám.</div>";
+                        };
+
+                        if($_GET['success'] == -1){
+                        echo "<div class=\"form-result error\">Chyba při&nbsp;odeslání. Zkuste to prosím znova.</div>";
+                        };
+                    ?>
+
                     <div class="form-star-box">
-                        <input type="text" name="name" id="" value="" placeholder="Jméno a příjmení" required><div class="form-star">*</div>
+                        <input type="text" name="name" id="" value="" placeholder="Jméno a příjmení"><div class="form-star">*</div>
                     </div>
     
                     <div class="form-star-box">
-                        <input type="email" name="email" id="form-email" value="" placeholder="E-mail" required><div class="form-star">*</div>
+                        <input type="email" name="email" id="form-email" value="" placeholder="E-mail"><div class="form-star">*</div>
                     </div>
     
                     <input type="tel" name="form-phone" id="form-phone" value="" pattern="\d{3} \d{3} \d{3}" maxlength="12" placeholder="Telefonní číslo">

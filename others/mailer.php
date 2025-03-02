@@ -20,12 +20,12 @@ $kids_ages_text = !empty($kids_ages) ? implode(", ", $kids_ages) : "Neuvedeno";
 
 // Kontrola nutných polí
 if (empty($name) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    header("Location: http://www.terka-a-marek.cz/#formular");
+    header("Location: http://www.terka-a-marek.cz/index.php?success=-1#formular");
     exit;
 }
 
 // Nastavení příjemců
-$recipients = ["marek.432@email.cz", "druhy.email@email.cz"];
+$recipients = ["marek.432@email.cz", "terkach23@gmail.com"];
 
 // Předmět e-mailu
 $subject = "Nová zpráva ke svatbě od: $name";
@@ -49,6 +49,6 @@ foreach ($recipients as $recipient) {
 }
 
 // Přesměrování po úspěšném odeslání
-header("Location: http://www.terka-a-marek.cz/#footer-box");
+header("Location: http://www.terka-a-marek.cz/index.php?success=1#formular");
 exit;
 ?>

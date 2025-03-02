@@ -1,7 +1,7 @@
 --------- Potřeba dodělat
 
 - svědkové: fotka míry
-- rozchodit formulář: přidat bloky úspěch, neúspěch
+- rozchodit formulář: lepši rolovani u odeslat
 
 --------- Nice to have
 
