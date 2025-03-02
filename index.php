@@ -347,7 +347,7 @@
         <section class="gallery" id="formular">
             <div class="row" id="formular-box">
                 <h2>Potvrzení účasti</h2>
-                <form action="" id="formular-layout">
+                <form action="/others/mailer.php" method="post" id="formular-layout">
                     <div class="form-star-box">
                         <input type="text" name="name" id="" value="" placeholder="Jméno a příjmení" required><div class="form-star">*</div>
                     </div>
@@ -366,13 +366,13 @@
     
                     <div id="form-partic">
                         <label for="partic-yes">
-                            <input type="radio" name="partic" value="yes" id="partic-yes" checked required>Rád dorazím
+                            <input type="radio" name="partic" value="ano" id="partic-yes" checked required>Rád dorazím
                         </label>
                         <label for="partic-yes-booth">
-                            <input type="radio" name="partic" value="yes-booth"id="partic-yes-booth" >Dorazím s doprovodem
+                            <input type="radio" name="partic" value="ano, s doprovodem" id="partic-yes-booth" >Dorazím s doprovodem
                         </label>
                         <label for="partic-no">
-                            <input type="radio" name="partic" value="no"id="partic-no" >Je mi líto, nedorazím
+                            <input type="radio" name="partic" value="ne" id="partic-no" >Je mi líto, nedorazím
                         </label>
                     </div>
                     
@@ -408,7 +408,7 @@
 
                     <p>Napište nám prosím!</p>
 
-                    <textarea name="" id="" rows="5" placeholder="Máte potravinové alergie? Potřebujete poradit s&nbsp;ubytováním nebo s&nbsp;cestou? Máte nějaký dotaz ohledně naší svatby?"></textarea>
+                    <textarea name="message" id="" rows="5" placeholder="Máte potravinové alergie? Potřebujete poradit s&nbsp;ubytováním nebo s&nbsp;cestou? Máte nějaký dotaz ohledně naší svatby?"></textarea>
 
                     <hr>
                     
