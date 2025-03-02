@@ -425,7 +425,7 @@ h1 {
 
 /** header box - odstranění sloganu a úprava formátu **/
 
-@media (min-aspect-ratio: 2/1), (min-aspect-ratio: 2/3) and (max-width: 380px), (min-aspect-ratio: 8/7) and (max-width: 769px){
+@media (min-aspect-ratio: 5/2), (min-aspect-ratio: 2/3) and (max-width: 380px), (min-aspect-ratio: 8/7) and (max-width: 769px){
 
     #header-box {
         width: calc(100% - 17em);
@@ -566,7 +566,7 @@ h1 {
     position: absolute;
     left: 50%;
     width: 0.33em; 
-    height: 35.6em;
+    height: 41.46em;
     transform: translate(-50%, 0%);
 }
 
@@ -622,9 +622,14 @@ h1 {
     grid-area: p7;
 }
 
+#one-program-p8 {
+    grid-area: p8;
+}
+
 #program-info-text {
     grid-area: tx;
     text-align: center;
+    padding-top: 4.58em;
 }
 
 #program-line hr:nth-child(odd) {
@@ -632,7 +637,7 @@ h1 {
 }
 
 #program-line hr:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0em;
 }
 
 .one-program-box {
@@ -1432,7 +1437,7 @@ footer {
         display: grid;
         border: 0;
         grid-template-columns: 1fr;
-        grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6" "p7" "tx";
+        grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6" "p7" "p8" "tx";
         margin: 0 auto;
         padding: 1em 1em 1em 1em;
         gap: 0.66em;
