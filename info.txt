@@ -18,10 +18,10 @@
 
 ------------ poznámky
 
-- udělat ten obdélník na headru 50% průhlednej?
 - Foto na úvod možná udělat barevný radient?
 
 - hover mi na mobilu zůstává - nechávám, při kliku na displey se vypne
 - odebral jsem info box "zvířata"
 - je povinný pouze e-mail - odstranil jsem JS pro "email NEBO telefon"
 - qr kód na peníze dělat nebudeme
+- udělat ten obdélník na headru 50% průhlednej? - NE
