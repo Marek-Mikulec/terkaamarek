@@ -461,6 +461,7 @@ h1 {
 
 .bg-box, .bg-box-fix {
     position: relative;
+    z-index: -1;
 }
 
 .bg-box-layout {
@@ -478,7 +479,7 @@ h1 {
     z-index: -5;
 }
 
-.left, .left-fix {
+.left, .left-b, .left-fix {
     left: 0;
     top: 10%;
 }
@@ -486,6 +487,11 @@ h1 {
 .right, .right-fix {
     right: 0;
     bottom: 5%;
+}
+
+.right-b {
+    right: 0;
+    bottom: 10%;
 }
 
 @media (max-width: 1250px) {

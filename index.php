@@ -78,7 +78,7 @@
     </header>
     <main>
 
-        <!-- listy na pozadí --> 
+        <!-- první listy na pozadí --> 
 
         <div class="bg-box">
             <div class="bg-box-layout">
@@ -331,6 +331,15 @@
             </div>
             <p id="info-ban-text"><strong>Neunášejte prosím nevěstu!!!!</strong></p>
         </section>
+
+        <!-- druhé listy na pozadí --> 
+
+        <div class="bg-box">
+            <div class="bg-box-layout">
+                <img src="images/big-spade-right.png" alt="Left Spade" class="bg-image left-b">
+                <img src="images/big-spade-left.png" alt="Right Spade" class="bg-image right-b">
+            </div>
+        </div>
 
         <!-- Formulář -->
 

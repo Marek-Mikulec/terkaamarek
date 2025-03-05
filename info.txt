@@ -1,15 +1,13 @@
 --------- Potřeba dodělat
 
 - svědkové: fotka míry
-- rozchodit formulář: lepši rolovani u odeslat + odstranit údaje z formuláře + nechodí všude na sekundární mejl
+- formulář: nechodí všude na sekundární mejl
 
 --------- Nice to have
 
 - Galerie
     - funkční galerie
     - Sekce o nás formát - možná upravit s galerií
-- Grafické prvky
-    - listy na pozadí - možná je opakovat
 
 --------- Možná později
 
