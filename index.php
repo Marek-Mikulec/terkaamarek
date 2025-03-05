@@ -96,16 +96,6 @@
             </div>
         </section>
 
-        <!-- Galerie - nedodělaná -->
-
-        <!-- <section class="gallery">
-            <div class="gallery-box">
-                <div><img src="images/dubecsky-spejchar.jpg" alt=""></div>
-                <div><img src="images/uvod-1920-vzor.jpg" alt=""></div>
-                <div><img src="images/dubecsky-spejchar.jpg" alt=""></div>
-            </div>
-        </section> -->
-
         <!-- Místo konání -->
 
         <section class="row" id="misto">

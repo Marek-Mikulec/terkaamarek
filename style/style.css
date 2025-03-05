@@ -82,7 +82,7 @@ main p, textarea {
 
 .ico-box {
     position: relative;
-    max-width: 1066px;
+    max-width: 710.6px;
     width: 100%;
     margin: 0 auto;
 }
@@ -647,15 +647,21 @@ h1 {
     gap: 0.33em;
     padding: 1em 0;
     margin-bottom: 2.914em;
+    width: 100%;
 }
 
 .one-program-box > * {
     text-align: center;
 }
 
+.one-program-box-img {
+    max-width: 8.7425em;
+    width: 100%;
+}
+
 .one-program-box-img img {
     height: 100%;
-    }
+}
 
 #program-layout .one-program-box:nth-child(even) {
     position: relative;

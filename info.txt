@@ -1,7 +1,7 @@
 --------- Potřeba dodělat
 
 - svědkové: fotka míry
-- rozchodit formulář: lepši rolovani u odeslat
+- rozchodit formulář: lepši rolovani u odeslat + odstranit údaje z formuláře + nechodí všude na sekundární mejl
 
 --------- Nice to have
 
